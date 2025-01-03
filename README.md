@@ -24,7 +24,7 @@ Analyzing Incarceration Trends with SAS
 Autocorrect Algorithm
 - Developed an auto-correct algorithm and real-time speed counter to enhance text accuracy and track typing efficiency. 
 - Designed and implemented dynamic error correction using advanced algorithms and data structures, ensuring seamless and responsive user interaction. Built the speed  counter to calculate words-per-minute in real-time, integrating it with a user-friendly interface
-- ![autocorrectimage}(/assets/autocorrect.png)
+- ![autocorrectimage](/assets/autocorrect.png)
   
 
 
