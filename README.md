@@ -17,4 +17,6 @@ Data Science and Operations Intern @ Pawrents
 - Cleaned and formatted datasets, addressing missing values and labeling categorical variables for clarity. 
 - Created visualizations like bar charts and bivariate analyses to uncover trends. 
 - Discovered higher incarceration rates for children with imprisoned or distant father figures.
-![incarceration](/assets/Research SAS software.pdf)
+[Incarceration Research PDF](assets/Research SAS software.pdf)
+
+
