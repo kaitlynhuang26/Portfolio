@@ -21,13 +21,13 @@ Analyzing Incarceration Trends with SAS
 
 
 
-#Autocorrect Algorithm
+## Autocorrect Algorithm
 - Developed an auto-correct algorithm and real-time speed counter to enhance text accuracy and track typing efficiency. 
 - Designed and implemented dynamic error correction using advanced algorithms and data structures, ensuring seamless and responsive user interaction. Built the speed  counter to calculate words-per-minute in real-time, integrating it with a user-friendly interface
 ![autocorrectimage](/assets/autocorrect.png)
 
 
-#Game Ants Vs.Bees
+## Game Ants Vs.Bees
 - Developed a Python-based strategy game using object-oriented programming principles, inspired by "Plants vs. Zombies," featuring dynamic player interactions and strategic gameplay. 
 - Enhanced the game simulation engine to handle complex states and actions, introducing innovative elements like water challenges and a central QueenAnt character to elevate tactical depth.
 ![ants](/assets/ants%20vs%20bees.gif)
