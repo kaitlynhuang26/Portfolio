@@ -45,7 +45,8 @@ Data Science and Operations Intern @ Pawrents
 - Assisted in developing pipelines and optimizing backend systems for efficient user interactions
 - Worked on UI/UX design with Figma, ensuring an intuitive and engaging user experience for seamless navigation
 [Pawty Website](https://pawty.ai/)
-![image](/assets/pawty%20image.png)
+![image](/assets/pawty%20image%20.jpg)
+
 
 
 
