@@ -13,6 +13,14 @@ Data Science and Operations Intern @ Pawrents
 
 ### Projects and Work Samples
 
+## Road Safety Improvement
+- Utilized Pandas, NumPy, and Matplotlib to do extensive data cleaning and perform EDA with 100+ data points related to crash types and lane types, deriving over 10 innovative recommendations to enhance road safety
+- Presented these safety measures to judges and learned Pandas and NumPy within 48 hours, boosting overall productivity and securing 2nd place
+- [Download Road Safety Improvement](/assets/Showcase%20-%20Beam%20%20Team%20(1).pdf)
+
+
+  
+
 ## Real-Time Dog Boarding Dashboard with Tableau
 - Designed and developed an interactive Tableau dashboard to optimize operations and provide actionable insights for a dog boarding facility. 
 - Dashboard features real-time tracking of boarding statuses, seasonal trend analysis, and customer insights. 
@@ -25,8 +33,6 @@ Data Science and Operations Intern @ Pawrents
 - Created visualizations like bar charts and bivariate analyses to uncover trends. 
 - Discovered higher incarceration rates for children with imprisoned or distant father figures.
 - [Download Research SAS Software PDF](https://kaitlynwidjaja.github.io/assets/Research%20SAS%20software.pdf)
-
-
 
 ## Autocorrect Algorithm
 - Developed an auto-correct algorithm and real-time speed counter to enhance text accuracy and track typing efficiency. 
@@ -44,7 +50,7 @@ Data Science and Operations Intern @ Pawrents
 - Integrated machine learning models for personality analysis and real-time, data-driven recommendations
 - Assisted in developing pipelines and optimizing backend systems for efficient user interactions
 - Worked on UI/UX design with Figma, ensuring an intuitive and engaging user experience for seamless navigation
-[Pawty Website](https://pawty.ai/)
+- [Pawty Website](https://pawty.ai/)
 ![image](/assets/pawty%20image%20.jpg)
 
 
