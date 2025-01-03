@@ -32,7 +32,7 @@ Data Science and Operations Intern @ Pawrents
 - Cleaned and formatted datasets, addressing missing values and labeling categorical variables for clarity. 
 - Created visualizations like bar charts and bivariate analyses to uncover trends. 
 - Discovered higher incarceration rates for children with imprisoned or distant father figures.
-- [Download Research SAS Software PDF](https://kaitlynwidjaja.github.io/assets/Research%20SAS%20software.pdf)
+- [Download Research SAS Software PDF](/assets/Research%20SAS%20software.pdf)
 
 ## Autocorrect Algorithm
 - Developed an auto-correct algorithm and real-time speed counter to enhance text accuracy and track typing efficiency. 
