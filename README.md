@@ -16,7 +16,7 @@ Data Science and Operations Intern @ Pawrents
 ## Road Safety Improvement
 - Utilized Pandas, NumPy, and Matplotlib to do extensive data cleaning and perform EDA with 100+ data points related to crash types and lane types, deriving over 10 innovative recommendations to enhance road safety
 - Presented these safety measures to judges and learned Pandas and NumPy within 48 hours, boosting overall productivity and securing 2nd place
-- [Download Road Safety Improvement](/assets/Showcase%20-%20Beam%20%20Team%20(1).pdf)
+- [Download Road Safety Improvement](/assets/Showcase%20-%20Beam%20Team%20(1).pdf)
 
 
   
