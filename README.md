@@ -32,7 +32,7 @@ strategy adopted by the department, driving a 15% sales increase
 - Designed and developed an interactive Tableau dashboard to optimize operations and provide actionable insights for a dog boarding facility. 
 - Dashboard features real-time tracking of boarding statuses, seasonal trend analysis, and customer insights. 
 - This project enhanced the company's operational efficiency, resource planning, and customer engagement through data-driven decision-making.
-![dog](/assets/Dashboard.pdf)
+  [Download Dog Boarding Dashboard](/assets/Dashboard.pdf)
 
 ## Analyzing Incarceration Trends with SAS
 - Utilized SAS software to analyze the relationship between father figure imprisonment, closeness, and child incarceration likelihood. 
