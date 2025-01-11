@@ -3,6 +3,8 @@
 ### Education 
 Statistics and Data Science, Bachelors @ University of California, Berkeley
 
+Hi! I'm Kaitlyn! As a data scientist in the making, I combine a sharp analytical mindset with a passion for innovation and impact. With expertise in Python, SQL, Tableau, Pandas, and NumPy, I specialize in turning complex datasets into clear, actionable strategies that solve real-world problems. What sets me apart is my ability to pair technical precision with creative problem-solving and leadership. Whether it's leading a team to develop innovative solutions, collaborating on cross-functional projects, or driving strategic decisions through data, I thrive on creating meaningful change. I’m not just passionate about numbers—I’m passionate about using them to tell stories, inspire action, and make a tangible difference.
+
 ### Work Experience 
 Data Scientist @ Excidia 
 
