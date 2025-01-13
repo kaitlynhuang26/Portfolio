@@ -1,9 +1,17 @@
-# kaitlynwidjaja.github.io
-# Data Scientist 
+
+# Aspriring Data Scientist 
 ### Education 
 Statistics and Data Science, Bachelors @ University of California, Berkeley
 
-Hi! I'm Kaitlyn! As a data scientist in the making, I combine a sharp analytical mindset with a passion for innovation and impact. With expertise in Python, SQL, Tableau, Pandas, and NumPy, I specialize in turning complex datasets into clear, actionable strategies that solve real-world problems. What sets me apart is my ability to pair technical precision with creative problem-solving and leadership. Whether it's leading a team to develop innovative solutions, collaborating on cross-functional projects, or driving strategic decisions through data, I thrive on creating meaningful change. I’m not just passionate about numbers—I’m passionate about using them to tell stories, inspire action, and make a tangible difference.
+### Hi! I'm Kaitlyn!
+
+Hi! I'm Kaitlyn Widjaja, a Junior majoring in Statistics at UC Berkeley and a data scientist in the making. I’m passionate about solving real-world challenges through data and strategic thinking. With expertise in Python, SQL, Tableau, Pandas, NumPy, Java, C++, SAS, and Excel, I specialize in turning complex datasets into actionable strategies that drive meaningful impact.
+
+What sets me apart is my ability to combine technical precision with creative problem-solving and leadership. From analyzing market trends to improving road safety through data insights, I thrive on tackling diverse challenges and delivering results. My experiences—from internships to leading cross-functional teams—have shaped me into an adaptable, curious, and impact-oriented professional.
+
+I’m driven by a desire to learn and grow, whether it’s exploring investment strategies, enhancing business operations, or uncovering data-driven solutions to complex problems. I’m not just passionate about numbers—I’m passionate about using them to tell stories, inspire action, and create a tangible difference across industries.
+
+
 
 ### Work Experience 
 Data Scientist @ Excidia 
