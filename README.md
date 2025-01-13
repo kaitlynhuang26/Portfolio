@@ -5,11 +5,9 @@ Statistics and Data Science, Bachelors @ University of California, Berkeley
 
 ### Hi! I'm Kaitlyn!
 
-Hi! I'm Kaitlyn Widjaja, a Junior majoring in Statistics at UC Berkeley and a data scientist in the making. I’m passionate about solving real-world challenges through data and strategic thinking. With expertise in Python, SQL, Tableau, Pandas, NumPy, Java, C++, SAS, and Excel, I specialize in turning complex datasets into actionable strategies that drive meaningful impact.
+Hi! I’m Kaitlyn Widjaja, a Junior at UC Berkeley majoring in Statistics and passionate about solving real-world challenges through data. With expertise in Python, SQL, Tableau, and NumPy, I excel at transforming complex datasets into impactful strategies.
 
-What sets me apart is my ability to combine technical precision with creative problem-solving and leadership. From analyzing market trends to improving road safety through data insights, I thrive on tackling diverse challenges and delivering results. My experiences—from internships to leading cross-functional teams—have shaped me into an adaptable, curious, and impact-oriented professional.
-
-I’m driven by a desire to learn and grow, whether it’s exploring investment strategies, enhancing business operations, or uncovering data-driven solutions to complex problems. I’m not just passionate about numbers—I’m passionate about using them to tell stories, inspire action, and create a tangible difference across industries.
+I thrive on creative problem-solving, whether it's analyzing market trends, improving systems, or uncovering data-driven insights. Adaptable and eager to grow, I’m driven to use data to tell compelling stories and create meaningful change across industries.
 
 
 
