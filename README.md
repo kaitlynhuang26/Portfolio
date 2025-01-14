@@ -12,7 +12,11 @@ I thrive on creative problem-solving, whether it's analyzing market trends, impr
 
 
 ### Work Experience 
-Data Scientist @ Excidia 
+Data Scientist @ Excidia Startup| AI Customs Clearance and Compliance platform 
+•Building the first AI Customs Clearance and Compliance platform in Indonesia to streamline processes for importers and exporters
+•Use Python to validate data accuracy and identify duplicate entries in import and export datasets
+•Implement web scraping techniques to extract data from export websites and identify HS codes, creating a clean and structured dataset
+•Collaborate with engineers to develop an AI-powered chatbot platform that enables users to ask questions, such as how to import fish, and receive accurate HS codes and trade guidance
 
 Data Science and Operations Intern @ Pawrents 
 - Conducted market research and exploratory data analysis (EDA) using Python to uncover user behavior patterns, optimize retention strategies, inform user acquisition and growth initiatives
