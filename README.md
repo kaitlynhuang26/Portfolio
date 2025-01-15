@@ -18,7 +18,7 @@ I thrive on creative problem-solving, whether it's analyzing market trends, impr
 - Founder and President of the Indonesian Student Association at Skyline College
 - Vice-President of International Student Association 2022-2023
 - International Student Ambassador at Skyline College bridging communication between international students and U.S. Department of State
-- Project Lead that empowered 20+ senior citizens to independently use technology for communication, accessing resources, and managing daily tasks
+- Volunteer Project Lead that empowered 20+ senior citizens to independently use technology for communication, accessing resources, and managing daily tasks
 - EYH Workshop Lead who inspired 80+ girls to explore STEM, increasing interest in forensic science careers from 6 to 32 participants
 
 
