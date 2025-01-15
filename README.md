@@ -3,20 +3,32 @@
 ### Education 
 Statistics and Data Science, Bachelors @ University of California, Berkeley
 
+Mathematics and Economics, Associates @ Skyline College 
+
+
 ### Hi! I'm Kaitlyn!
 
 Hi! I’m Kaitlyn Widjaja, a Junior at UC Berkeley majoring in Statistics and passionate about solving real-world challenges through data. With expertise in Python, SQL, Tableau, and NumPy, I excel at transforming complex datasets into impactful strategies.
 
 I thrive on creative problem-solving, whether it's analyzing market trends, improving systems, or uncovering data-driven insights. Adaptable and eager to grow, I’m driven to use data to tell compelling stories and create meaningful change across industries.
 
+### Leaderships 
+
+- Co-President of Phi Theta Kappa Honor Society 2022-2023 elevating the chapter to a top 41 international ranking among 1200+ chapters
+- Founder and President of the Indonesian Student Association at Skyline College
+- Vice-President of International Student Association 2022-2023
+- International Student Ambassador at Skyline College bridging communication between international students and U.S. Department of State
+- Project Lead that empowered 20+ senior citizens to independently use technology for communication, accessing resources, and managing daily tasks
+- EYH Workshop Lead who inspired 80+ girls to explore STEM, increasing interest in forensic science careers from 6 to 32 participants
+
 
 
 ### Work Experience 
 Data Scientist @ Excidia Startup| AI Customs Clearance and Compliance platform 
-•Building the first AI Customs Clearance and Compliance platform in Indonesia to streamline processes for importers and exporters
-•Use Python to validate data accuracy and identify duplicate entries in import and export datasets
-•Implement web scraping techniques to extract data from export websites and identify HS codes, creating a clean and structured dataset
-•Collaborate with engineers to develop an AI-powered chatbot platform that enables users to ask questions, such as how to import fish, and receive accurate HS codes and trade guidance
+- Building the first AI Customs Clearance and Compliance platform in Indonesia to streamline processes for importers and exporters
+- Use Python to validate data accuracy and identify duplicate entries in import and export datasets
+- Implement web scraping techniques to extract data from export websites and identify HS codes, creating a clean and structured dataset
+- Collaborate with engineers to develop an AI-powered chatbot platform that enables users to ask questions, such as how to import fish, and receive accurate HS codes and trade guidance
 
 Data Science and Operations Intern @ Pawrents 
 - Conducted market research and exploratory data analysis (EDA) using Python to uncover user behavior patterns, optimize retention strategies, inform user acquisition and growth initiatives
@@ -37,8 +49,6 @@ strategy adopted by the department, driving a 15% sales increase
 - Presented these safety measures to judges and learned Pandas and NumPy within 48 hours, boosting overall productivity and securing 2nd place
 - [Download Road Safety Improvement](/assets/ShowcaseBeamTeam.pdf)
 
-
-  
 
 ## Real-Time Dog Boarding Dashboard with Tableau
 - Designed and developed an interactive Tableau dashboard to optimize operations and provide actionable insights for a dog boarding facility. 
