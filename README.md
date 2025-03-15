@@ -8,9 +8,9 @@ Mathematics and Economics, Associates @ Skyline College
 
 ### Hi! I'm Kaitlyn!
 
-Hi! I’m Kaitlyn Widjaja, a Junior at UC Berkeley majoring in Statistics and passionate about solving real-world challenges through data. With expertise in Python, SQL, Tableau, and NumPy, I excel at transforming complex datasets into impactful strategies.
+Hi! I’m Kaitlyn Widjaja, a Junior majoring in Statistics at UC Berkeley. I want to be a Data Scientist who not only helps businesses grow but also creates solutions that make a real difference in people's lives. For me, data isn’t just about numbers—it’s about finding smarter ways to solve problems, improve efficiency, and make technology more accessible.
 
-I thrive on creative problem-solving, whether it's analyzing market trends, improving systems, or uncovering data-driven insights. Adaptable and eager to grow, I’m driven to use data to tell compelling stories and create meaningful change across industries.
+My diverse experiences—from internships to leadership roles—have shaped me into an adaptable, curious, and impact-oriented professional with a strong foundation in programming and data analytics (Python, Java, C++, NumPy, Pandas, SQL, SAS, Excel), visualization (Tableau, Matplotlib), and effectively communicating data insights.
 
 ### Leading with Purpose, Inspiring Communities
 
@@ -22,12 +22,16 @@ I thrive on creative problem-solving, whether it's analyzing market trends, impr
 - EYH Workshop Lead who inspired 80+ girls to explore STEM, increasing interest in forensic science careers from 6 to 32 participants
 
 
-### Work Experience 
+### Work Experience
+
+**Software Developer Intern @ Qlay Technologies**
+-Developing an AI-powered English pronunciation assessment system using Natural Language Processing (NLP) and Machine
+Learning to evaluate user speech against native pronunciation and provide real-time feedback for improvement
+
 **Data Scientist @ Excidia Startup | AI Customs Clearance and Compliance platform**
 - Building the first AI Customs Clearance and Compliance platform in Indonesia to streamline processes for importers and exporters
-- Use Python to validate data accuracy and identify duplicate entries in import and export datasets
-- Implement web scraping techniques to extract data from export websites and identify HS codes, creating a clean and structured dataset
-- Collaborate with engineers to develop an AI-powered chatbot platform that enables users to ask questions, such as how to import fish, and receive accurate HS codes and trade guidance
+- Using Python (Selenium) to web scrape, validate data accuracy, identify duplicates, and structure datasets of 5000+ HS codes
+- Evaluating model performance and collaborating with engineers to develop a machine learning-driven chatbot
 
 **Data Science and Operations Intern @ Pawrents** 
 - Conducted market research and exploratory data analysis (EDA) using Python to uncover user behavior patterns, optimize retention strategies, inform user acquisition and growth initiatives
@@ -68,17 +72,16 @@ strategy adopted by the department, driving a 15% sales increase
 - Designed and implemented dynamic error correction using advanced algorithms and data structures, ensuring seamless and responsive user interaction. Built the speed  counter to calculate words-per-minute in real-time, integrating it with a user-friendly interface
 ![autocorrectimage](/assets/autocorrect.png)
 
-
 ### Game Ants Vs.Bees
 - Developed a Python-based strategy game using object-oriented programming principles, inspired by "Plants vs. Zombies," featuring dynamic player interactions and strategic gameplay. 
 - Enhanced the game simulation engine to handle complex states and actions, introducing innovative elements like water challenges and a central QueenAnt character to elevate tactical depth.
 ![ants](/assets/antsvsbees.gif)
 
 ### Instagram Dog Personality Analysis
-- Collaborated with engineers to build Pawty.ai, an AI-powered platform that uses web scraping and Instagram API to analyze dog-parent dynamics and provide personalized insights. 
-- Integrated machine learning models for personality analysis and real-time, data-driven recommendations
-- Assisted in developing pipelines and optimizing backend systems for efficient user interactions
-- Worked on UI/UX design with Figma, ensuring an intuitive and engaging user experience for seamless navigation
+-Collaborated with engineers to develop Pawty.ai, a computer vision-powered AI system that analyzes dog images from the Instagram API and generates personalized animated transformations using Stable Diffusion models.
+-Implemented deep learning models to extract dog breed, facial expressions, and unique traits, enabling AI-driven animations and personalized descriptions like humorous roasts.
+-Optimized image processing pipelines to handle large-scale Instagram datasets, ensuring accurate pattern recognition and personality-based insights.
+-Worked on UI/UX design with Figma, ensuring an intuitive and engaging user experience for seamless navigation
 - [Pawty Website](https://pawty.ai/)
 ![image](/assets/pawtyimage.jpg)
 
