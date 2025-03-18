@@ -58,6 +58,33 @@
         .project img {
             width: 100%;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 5%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -78,53 +105,36 @@
             <a href="#" class="button" onclick="showSection('timeline')">My Journey</a>
         </div>
         
-        <div id="leadership" class="section">
-            <h2>Leading with Purpose, Inspiring Communities</h2>
-            <p>• Co-President of Phi Theta Kappa Honor Society...</p>
-        </div>
-
-        <div id="work" class="section">
-            <h2>Work Experience</h2>
-            <p>• Software Developer Intern @ Qlay Technologies...</p>
-        </div>
-        
         <div id="projects" class="section">
             <h2>Projects and Work Samples</h2>
             <div class="project-container">
                 <div class="project">
-                    <img src="assets/autocorrect.png" alt="Autocorrect Algorithm">
+                    <img src="assets/autocorrect.png" alt="Autocorrect Algorithm" onclick="openModal(this.src)">
                     <h3>Autocorrect Algorithm</h3>
                     <p>Developed an auto-correct algorithm and real-time speed counter to enhance text accuracy and track typing efficiency. Implemented advanced data structures and error correction models.</p>
                 </div>
                 <div class="project">
-                    <img src="assets/antsvsbees.gif" alt="Ants vs. Bees">
+                    <img src="assets/antsvsbees.gif" alt="Ants vs. Bees" onclick="openModal(this.src)">
                     <h3>Game: Ants vs. Bees</h3>
                     <p>Developed a Python-based strategy game inspired by "Plants vs. Zombies." Designed complex states and actions, introducing a unique QueenAnt character for deeper strategic gameplay.</p>
                 </div>
                 <div class="project">
-                    <img src="assets/pawtyimage.jpg" alt="Pawty AI">
+                    <img src="assets/pawtyimage.jpg" alt="Pawty AI" onclick="openModal(this.src)">
                     <h3>Pawty AI</h3>
                     <p>Collaborated with engineers to develop Pawty.ai, a computer vision-powered AI system that analyzes dog images and generates personalized animated transformations using Stable Diffusion models.</p>
+                    <a href="https://pawty.ai/" class="button">Visit Pawty Website</a>
                 </div>
             </div>
-            <br>
-            <a href="https://pawty.ai/" class="button">Visit Pawty Website</a>
             <br>
             <a href="assets/ShowcaseBeamTeam.pdf" class="button">Download Road Safety Improvement</a>
             <a href="assets/Dashboard.pdf" class="button">Download Dog Boarding Dashboard</a>
             <a href="assets/ResearchSASsoftware.pdf" class="button">Download Research SAS Software PDF</a>
         </div>
+    </div>
 
-        <div id="timeline" class="section">
-            <h2>My Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item"><h3>2018</h3><p>Started my journey in Mathematics & Economics at Skyline College.</p></div>
-                <div class="timeline-item"><h3>2020</h3><p>Became Co-President of Phi Theta Kappa Honor Society.</p></div>
-                <div class="timeline-item"><h3>2022</h3><p>Transferred to UC Berkeley for Statistics & Data Science.</p></div>
-                <div class="timeline-item"><h3>2023</h3><p>Interned at Glamox Lighting Industry, analyzing 800+ transactions.</p></div>
-                <div class="timeline-item"><h3>2024</h3><p>Joined Excidia Startup, building AI-powered trade compliance systems.</p></div>
-            </div>
-        </div>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
 
     <script>
@@ -133,6 +143,15 @@
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
+        }
+        
+        function openModal(src) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
     </script>
 </body>
