@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaitlyn Widjaja - Aspiring Data Scientist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            background: white;
+            border-radius: 5px;
+            width: 45%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aspiring Data Scientist</h1>
+        <h3>Education</h3>
+        <p>Statistics and Data Science, Bachelors @ University of California, Berkeley</p>
+        <p>Mathematics and Economics, Associates @ Skyline College</p>
+        
+        <h2>Hi! I'm Kaitlyn!</h2>
+        <p>Hi! I’m Kaitlyn Widjaja, a Junior majoring in Statistics at UC Berkeley...</p>
+        
+        <div>
+            <a href="#" class="button" onclick="showSection('leadership')">Leadership</a>
+            <a href="#" class="button" onclick="showSection('work')">Work Experience</a>
+            <a href="#" class="button" onclick="showSection('projects')">Projects</a>
+            <a href="#" class="button" onclick="showSection('timeline')">My Journey</a>
+        </div>
+        
+        <div id="leadership" class="section">
+            <h2>Leading with Purpose, Inspiring Communities</h2>
+            <p>• Co-President of Phi Theta Kappa Honor Society...</p>
+        </div>
+
+        <div id="work" class="section">
+            <h2>Work Experience</h2>
+            <p>• Software Developer Intern @ Qlay Technologies...</p>
+        </div>
+        
+        <div id="projects" class="section">
+            <h2>Projects and Work Samples</h2>
+            <a href="assets/ShowcaseBeamTeam.pdf" class="button">Download Road Safety Improvement</a>
+            <a href="assets/Dashboard.pdf" class="button">Download Dog Boarding Dashboard</a>
+            <a href="assets/ResearchSASsoftware.pdf" class="button">Download Research SAS Software PDF</a>
+            <br>
+            <img src="assets/autocorrect.png" alt="Autocorrect Algorithm" width="300">
+            <img src="assets/antsvsbees.gif" alt="Ants vs. Bees" width="300">
+            <img src="assets/pawtyimage.jpg" alt="Pawty AI" width="300">
+            <br>
+            <a href="https://pawty.ai/" class="button">Visit Pawty Website</a>
+        </div>
+
+        <div id="timeline" class="section">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item"><h3>2018</h3><p>Started my journey in Mathematics & Economics at Skyline College.</p></div>
+                <div class="timeline-item"><h3>2020</h3><p>Became Co-President of Phi Theta Kappa Honor Society.</p></div>
+                <div class="timeline-item"><h3>2022</h3><p>Transferred to UC Berkeley for Statistics & Data Science.</p></div>
+                <div class="timeline-item"><h3>2023</h3><p>Interned at Glamox Lighting Industry, analyzing 800+ transactions.</p></div>
+                <div class="timeline-item"><h3>2024</h3><p>Joined Excidia Startup, building AI-powered trade compliance systems.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
