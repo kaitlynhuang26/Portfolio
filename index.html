@@ -95,7 +95,7 @@
   .about-card{background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #eef0fb;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
 .about-card .lead {
   display: block;
-  max-width: none;     /* <-- kill the 780px cap */
+  max-width: none !important;     /* <-- kill the 780px cap */
   width: 100%;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -230,15 +230,16 @@
     <article class="card">
       <div class="thumb"><span>ETL + Dashboards</span></div>
       <h3>TikTok Storage Observability</h3>
-      <p>Built end-to-end Spark/SQL pipelines powering operational dashboards for TikTok’s storage infrastructure, reducing incident triage time by 96% (1 hour → 2 minutes) and providing insights projected to save millions in infrastructure costs; automated compliance and legal inquiry workflows, improving visibility and saving 40–100 manual hours per request.</p>
+      <p>Built end-to-end Spark/SQL pipelines powering operational dashboards for TikTok’s storage infrastructure, reducing Site Realiabilty Engineer incident resolution time by 96% (1 hour → 2 minutes) and providing insights projected to save millions in infrastructure costs; automated compliance and legal inquiry workflows, improving visibility and saving 40–100 manual hours per request.</p>
 
     </article>
 
     <!-- NLP / ML -->
     <article class="card">
       <div class="thumb"><span>NLP • ML</span></div>
+      <img src="assets/kmeans.png" alt="Clustering Speech Segments screenshot" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
       <h3>Speech Quality & Fraud Signals</h3>
-      <p>Back-end (FastAPI, PostgreSQL) and analytics for multimodal speech evaluation; real-time anomaly detection.</p>
+      <p>Built backend APIs with FastAPI and PostgreSQL to support multimodal speech and behavioral analysis, enabling real-time anomaly and fraud detection for online interviews. Developed analytics pipelines to process speech and gaze data, generating actionable performance insights and improving evaluation reliability.</p>
     </article>
 
     <!-- HS Code Assistant -->
@@ -252,7 +253,6 @@
 <article class="card">
   <div class="thumb">
     <img src="assets/autocorrect.png" alt="Autocorrect Algorithm screenshot" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-    <span>Data Structures</span>
   </div>
   <h3>Autocorrect Algorithm</h3>
   <p>Developed an autocorrect algorithm and real-time typing speed counter using advanced data structures and error-correction models.</p>
@@ -262,7 +262,6 @@
 <article class="card">
   <div class="thumb">
     <img src="assets/antsvsbees.gif" alt="Ants vs. Bees game GIF" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-    <span>Python Game</span>
   </div>
   <h3>Ants vs. Bees</h3>
   <p>Built a Python strategy game inspired by “Plants vs. Zombies.” Designed complex states/actions and created a QueenAnt character for deeper gameplay.</p>
@@ -272,17 +271,15 @@
 <article class="card">
   <div class="thumb">
     <img src="assets/pawtyimage.jpg" alt="Pawty AI example output" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-    <span>Computer Vision</span>
   </div>
   <h3>Pawty AI</h3>
-  <p>Collaborated with engineers to build Pawty.ai, a computer vision system that transforms dog images into animated outputs using Stable Diffusion.</p>
+  <p>Collaborated with engineers to build Pawty.ai, a computer vision system that transforms dog images into animated outputs using Stable Diffusion; increased user engagement by 15% and boosted user acquisition by 10% </p>
   <a href="https://pawty.ai/" class="button">Visit Website</a>
 </article>
 
 <!-- Datathon: Road Safety -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/road_safety.png" alt="Road Safety Improvement visualization" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>EDA • NumPy • Pandas</span>
   </div>
   <h3>Road Safety Improvement</h3>
@@ -293,7 +290,6 @@
 <!-- Dog Boarding Dashboard -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/dog_boarding_dashboard.png" alt="Dog Boarding dashboard screenshot" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>Dashboard</span>
   </div>
   <h3>Dog Boarding Dashboard</h3>
@@ -304,7 +300,6 @@
 <!-- SAS Research -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/incarceration_sas.png" alt="SAS research charts" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>SAS • Research</span>
   </div>
   <h3>Analyzing Incarceration</h3>
@@ -315,7 +310,6 @@
 <!-- Bike Sharing -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/bike_sharing.png" alt="Bike sharing demand plots" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>EDA • Pandas</span>
   </div>
   <h3>Bike Sharing Demand</h3>
@@ -326,7 +320,6 @@
 <!-- Chicago Crime SQL -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/chicago_crime.png" alt="Chicago crime analysis charts" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>SQL</span>
   </div>
   <h3>Chicago Crime Analysis</h3>
@@ -337,7 +330,6 @@
 <!-- Regression -->
 <article class="card">
   <div class="thumb">
-    <img src="assets/regression.png" alt="Regression model outputs" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
     <span>Regression</span>
   </div>
   <h3>Regression Analysis</h3>
