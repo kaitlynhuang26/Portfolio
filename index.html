@@ -87,9 +87,19 @@
   /* ===== Sections ===== */
   .section{padding:80px 0;border-top:1px solid #f3f4f8}
   .section h2{font-size:34px;margin:0 0 18px;color:#161827}
-  .section p.lead{color:#4d5369;max-width:780px}
+  .section p.lead {
+  color:#4d5369;
+  max-width:780px;   
+}
   .about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
   .about-card{background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #eef0fb;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.about-card .lead {
+  display: block;
+  width: 100%;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #4d5369;
+}
   .grid{display:grid;gap:22px}
   .grid.projects{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
   .card{background:#fff;border:1px solid #edf0fb;border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
