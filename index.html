@@ -131,6 +131,14 @@
   .lead-card img{width:100%;height:170px;object-fit:cover}
   .lead-card .body{padding:14px 16px 18px}
   .lead-card h3{margin:4px 0 6px}
+  .lead-card .subimg{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-top:12px;
+  display:block;
+}
   .contact{background:linear-gradient(180deg,#0f1320,#171a2d);color:#fff}
   .contact .inner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
   .contact a{color:#fff}
@@ -369,49 +377,72 @@
     </div>
   </section>
 
-  <!-- LEADERSHIP & COMMUNITY -->
-  <section class="section container" id="leadership">
-    <h2>Leadership & Community Impact</h2>
-    <div class="leadership">
-      <article class="lead-card">
-        <img src="assets/lead_ptk.jpg" alt="PTK event" />
-        <div class="body">
-          <h3>Co‑President, Phi Theta Kappa Honor Society (2022–2023)</h3>
-          <p>Led our chapter to rank top 41/1,200+ globally. Organized 12 campus events from workshops to beach cleanups; built a culture of community and support.</p>
-        </div>
-      </article>
-      <article class="lead-card">
-        <img src="assets/lead_isa.jpg" alt="Indonesian Student Association" />
-        <div class="body">
-          <h3>Founder & President, Indonesian Student Association</h3>
-          <p>Created the first Indonesian Student Association at Skyline; shared culture via games, music, and performances—from wayang to gamelan.</p>
-        </div>
-      </article>
-      <article class="lead-card">
-        <img src="assets/lead_isp.jpg" alt="International Student Program" />
-        <div class="body">
-          <h3>International Student Ambassador</h3>
-          <p>Bridged communications between international students and the U.S. Department of State; supported 300+ students via orientations, workshops, and cultural events.</p>
-        </div>
-      </article>
-      <article class="lead-card">
-        <img src="assets/lead_seniors.jpg" alt="Tech for Seniors" />
-        <div class="body">
-          <h3>Volunteer Project Lead — Tech for Seniors</h3>
-          <p>Taught 20+ seniors how to use tech (texts to Zoom). Offered service in 9 languages; helped them connect with family and essential services.</p>
-        </div>
-      </article>
-      <article class="lead-card">
-        <img src="assets/lead_eyh.jpg" alt="Forensic Science workshop" />
-        <div class="body">
-          <h3>EYH Workshop Lead — Forensic Science in STEM</h3>
-          <p>Designed a hands‑on STEM workshop for 80+ middle school girls; 6→32 students wanted to pursue forensic science after.</p>
-        </div>
-      </article>
-    </div>
-    <p class="small">Replace images in <code>/assets/</code> with your own photos; keep the same file names or update the <code>src</code> paths.</p>
-  </section>
+<!-- LEADERSHIP & COMMUNITY -->
+<section class="section container" id="leadership">
+  <h2>Leadership & Community Impact</h2>
+  <div class="leadership">
+    <!-- PTK -->
+    <article class="lead-card">
+      <img src="assets/scholarship.png" alt="Scholarship Workshop" />
+      <div class="body">
+        <h3>Co-President, Phi Theta Kappa Honor Society (2022–2023)</h3>
+        <p>
+          Led our chapter to rank top 41 out of 1,200+ worldwide! 🎉 Organized 12 campus events — from scholarship and college success workshops to fun socials and beach cleanups. It wasn’t just about honor; it was about heart, community, and lifting each other up.
+        </p>
+        <img class="subimg" src="assets/beach.jpeg" alt="Beach cleanup" />
+      </div>
+    </article>
 
+    <!-- Indonesian Student Association -->
+    <article class="lead-card">
+      <img src="assets/gamelan.jpg" alt="Indonesian culture performance" />
+      <div class="body">
+        <h3>Founder & President, Indonesian Student Association</h3>
+        <p>
+          I started the first Indonesian Student Association at Skyline to create a safe space for fellow Indonesians to connect and feel at home. We shared our rich culture with the campus through traditional games, music, and performances — from wayang to gamelan!
+        </p>
+        <img class="subimg" src="assets/indo.jpg" alt="Indonesian community gathering" />
+      </div>
+    </article>
+
+    <!-- International Student Ambassador -->
+    <article class="lead-card">
+      <img src="assets/international.jpg" alt="International student event" />
+      <div class="body">
+        <h3>International Student Ambassador</h3>
+        <p>
+          Bridged communication between international students and the U.S. Department of State, while mentoring and supporting over 300 students. Hosted orientations, career workshops, and cultural events that brought our campus together and celebrated global diversity.
+        </p>
+        <img class="subimg" src="assets/usgov.png" alt="Department of State engagement" />
+      </div>
+    </article>
+
+    <!-- Tech for Seniors -->
+    <article class="lead-card">
+      <img src="assets/ptkseniors.jpg" alt="Teaching seniors tech" />
+      <div class="body">
+        <h3>Volunteer Project Lead — Tech for Seniors</h3>
+        <p>
+          Led a volunteer project to teach 20+ senior citizens how to use tech — from sending texts to Zoom calls. Helped them stay connected with family, access services, and feel confident navigating daily life digitally. Offered the service in 9 different languages!
+        </p>
+        <img class="subimg" src="assets/seniors.jpeg" alt="Senior workshop" />
+      </div>
+    </article>
+
+    <!-- EYH Workshop -->
+    <article class="lead-card">
+      <img src="assets/stem.jpeg" alt="STEM workshop" />
+      <div class="body">
+        <h3>EYH Workshop Lead — Forensic Science in STEM</h3>
+        <p>
+          Designed and led a hands-on STEM workshop for 80+ middle school girls. We went from 6 to 32 students saying they wanted to pursue forensic science! 👩‍🔬 It was great inspiring the next generation of women in STEM.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+  
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="container inner">
