@@ -149,6 +149,49 @@
   .list li{margin:6px 0}
   .hide{display:none}
 
+  .timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 2px solid #e0e4f3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: var(--brand);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #e0e4f3;
+}
+
+.timeline-content {
+  background: #fff;
+  border: 1px solid #edf0fb;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.timeline-content h3 {
+  margin: 0 0 6px;
+}
+
+.timeline-content .meta {
+  font-size: 14px;
+  color: #666c80;
+  margin: 0 0 12px;
+}
+
+
   /* ===== Responsive ===== */
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr}
@@ -168,6 +211,7 @@
       <nav class="navlinks">
         <a href="#portfolio">Portfolio</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -242,6 +286,69 @@
   </div>
 </section>
 
+<!-- JOB TIMELINE -->
+<section class="section container" id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+
+    <!-- TikTok -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>TikTok US Data Security — Data Engineer Intern</h3>
+        <p class="meta">San Jose, CA • May 2025 – Aug 2025</p>
+        <ul>
+          <li>Led the design of two high-impact dashboards for critical storage infrastructure, defining requirements and developing <strong>end-to-end ETL pipelines</strong> (Spark, SQL) to integrate multi-source data.</li>
+          <li>Reduced SRE on-call resolution time by <strong>96%</strong> (1 hour → 2 minutes), providing insights projected to save <strong>millions</strong> in infrastructure costs.</li>
+          <li>Automated compliance/legal inquiry workflows, improving visibility and saving <strong>40–100</strong> manual hours per request.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Qlay -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Qlay Technologies — Software Development Intern</h3>
+        <p class="meta">Berkeley, CA • Feb 2025 – May 2025</p>
+        <ul>
+          <li>Engineered an <strong>AI-powered speech analysis system</strong> (NLP, ML) to evaluate pronunciation, fluency, and behavioral patterns for anomaly/fraud detection.</li>
+          <li>Developed backend APIs with <strong>FastAPI</strong> and <strong>PostgreSQL</strong> for model integration, data collection, and analysis.</li>
+          <li>Created analytics pipelines to process <strong>speech</strong> and <strong>gaze data</strong>, generating actionable performance insights.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Excidia -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Excidia — Data Scientist</h3>
+        <p class="meta">Berkeley, CA • Nov 2024 – May 2025</p>
+        <ul>
+          <li>Built Python scripts to scrape, validate, and structure datasets of <strong>5,000+ Harmonized System (HS) Codes</strong>, ensuring accuracy and deduplication.</li>
+          <li>Evaluated ML model performance and collaborated with engineers to design a chatbot for automated HS code classification.</li>
+          <li>Selected as one of <strong>50 startups</strong> in Berkeley SkyDeck’s Batch 19 Pad-13 Incubator Program; met with importers/exporters to refine and present AI-driven customs clearance solutions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pawty -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Pawty.ai — Data Science & Operations Strategy Intern</h3>
+        <p class="meta">Berkeley, CA • Sep 2024 – Dec 2024</p>
+        <ul>
+          <li>Conducted <strong>EDA</strong> with Python and SQL to uncover trends, optimize retention strategies, and boost user acquisition by <strong>10%</strong>.</li>
+          <li>Built and managed <strong>Tableau dashboards</strong>, integrating SQL queries to deliver actionable insights for decision-making.</li>
+          <li>Developed an AI platform leveraging the <strong>Instagram API</strong> and diffusion models to analyze dog–parent dynamics, increasing engagement by <strong>15%</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- PORTFOLIO / PROJECTS -->
