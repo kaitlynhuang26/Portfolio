@@ -4,204 +4,523 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kaitlyn Widjaja — Data Engineer & Data Scientist</title>
-  <meta name="description" content="Portfolio of Kaitlyn Widjaja — Data Engineering, Data Science, Leadership, Projects, and Contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Portfolio of Kaitlyn Widjaja — Data Engineering, Data Science, Leadership, Projects, and Contact."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-  :root{
-    --bg:#0b0b12;--ink:#0f1021;--ink-2:#1e2030;--text:#0f1320;--muted:#5a6175;--brand:#4f46e5;--brand-2:#7c3aed;--pill:#eef2ff;--card:#ffffff;--accent:#a78bfa;--gradient-1:#e9e7ff;--gradient-2:#efe9ff;--gradient-3:#f7f5ff;--shadow:0 10px 30px rgba(8,10,36,.08);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:#12131a;background:#fff;}
-  a{color:var(--brand);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    :root {
+      --bg: #0b0b12;
+      --ink: #0f1021;
+      --ink-2: #1e2030;
+      --text: #12131a;
+      --muted: #5a6175;
+      --brand: #4f46e5;
+      --brand-2: #7c3aed;
+      --pill: #eef2ff;
+      --card: #ffffff;
+      --accent: #a78bfa;
+      --gradient-1: #e9e7ff;
+      --gradient-2: #e8f0ff;
+      --gradient-3: #f6f7ff;
+      --shadow: 0 10px 30px rgba(8, 10, 36, 0.08);
+      --border: #edf0fb;
+      --section-border: #f3f4f8;
+    }
 
-  header.nav{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(150%) blur(8px);z-index:50;border-bottom:1px solid #f1f1f8}
-  header .inner{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{font-weight:800;letter-spacing:.2px}
-  .navlinks a{margin-left:20px;font-weight:600;color:#1a1c29}
+    * {
+      box-sizing: border-box;
+    }
 
-  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--brand);color:#fff;border:none;padding:14px 18px;border-radius:12px;font-weight:700;box-shadow:0 8px 20px rgba(79,70,229,.25);transition:.2s transform}
-  .btn:hover{transform:translateY(-2px);text-decoration:none}
-  .btn.outline{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: #fff;
+    }
 
-  .button {
-  display: inline-block;
-  padding: 10px 16px;
-  margin: 0 16px 16px;   /* keeps spacing inside each card */
-  background: var(--brand);
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  transition: 0.2s;
-}
-.button:hover {
-  background: var(--brand-2);
-  text-decoration: none;
-}
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
 
-  .hero{position:relative;padding:80px 0 40px;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .title{font-size:54px;line-height:1.05;margin:0 0 16px;color:#15172b}
-  .subtitle{font-size:18px;color:#4a5066;margin:0 0 28px}
-  .pill{display:inline-block;background:var(--pill);color:var(--brand);padding:8px 12px;border-radius:999px;font-weight:700;margin-bottom:14px;border:1px solid #e6eaff}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-  /* ===== Hero photo as perfect circle ===== */
-  .circle-wrap{
-  position: relative;
-  width: clamp(220px, 30vw, 350px);
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 16px;   /* add bottom spacing for badges */
-}
+    /* ---------- Navigation ---------- */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(150%) blur(8px);
+      border-bottom: 1px solid #f1f1f8;
+    }
 
-.circle-wrap img{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 0 0 6px #fff, 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.circle-wrap img:hover{
-  transform: scale(1.03);
-  box-shadow: 0 0 0 6px #fff, 0 12px 30px rgba(0,0,0,0.3);
-}
+    header .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
 
-/* badges now NEXT TO the circle */
-.badge-links {
-  display: flex;
-  flex-direction: column;  /* stack vertically (change to row if you want side by side) */
-  gap: 12px;
-  margin-left: 16px;       /* spacing between photo and badges */
-}
-.badge{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.badge:hover{
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-.badge.github{ background:#0d1117; color:#fff; }
-.badge.linkedin{ background:#0a66c2; color:#fff; }
-.badge svg{ width: 18px; height: 18px; color: #fff; }
-    
-  /* ===== Sections ===== */
-  .section{padding:80px 0;border-top:1px solid #f3f4f8}
-  .section h2{font-size:34px;margin:0 0 18px;color:#161827}
-  .section p.lead {
-  color:#4d5369;
-  max-width:780px;   
-}
-  .about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
-  .about-card{background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #eef0fb;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-.about-card .lead {
-  display: block;
-  max-width: none !important;     /* <-- kill the 780px cap */
-  width: 100%;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #4d5369;
-}
-  .grid{display:grid;gap:22px}
-  .grid.projects{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-  .card{background:#fff;border:1px solid #edf0fb;border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-  .card .thumb{height:160px;background:linear-gradient(135deg,#e9e7ff,#e8f0ff 60%,#f6f7ff);display:grid;place-items:center}
-  .card h3{margin:16px 16px 6px}
-  .card p{margin:0 16px 18px;color:#555c71}
-  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-  .skill{background:#fff;border:1px solid #edf0fb;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-  .skill h4{margin:4px 0 8px}
-  .leadership{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-  .lead-card{background:#fff;border:1px solid #e9ecfa;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
-  .lead-card img{width:100%;height:170px;object-fit:cover}
-  .lead-card .body{padding:14px 16px 18px}
-  .lead-card h3{margin:4px 0 6px}
-  .lead-card .subimg{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-top:12px;
-  display:block;
-}
-  .contact{background:linear-gradient(180deg,#0f1320,#171a2d);color:#fff}
-  .contact .inner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-  .contact a{color:#fff}
-  footer{padding:26px 0;color:#6f7590;text-align:center}
-  .small{font-size:12px;color:#6c7390}
-  .icons{opacity:.8}
-  .list{padding-left:18px}
-  .list li{margin:6px 0}
-  .hide{display:none}
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
 
-  .timeline {
-  position: relative;
-  margin: 40px 0;
-  padding-left: 30px;
-  border-left: 2px solid #e0e4f3;
-}
+    .navlinks a {
+      margin-left: 20px;
+      font-weight: 600;
+      color: #1a1c29;
+    }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 40px;
-}
+    /* ---------- Buttons ---------- */
+    .btn,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-.timeline-dot {
-  position: absolute;
-  left: -11px;
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  background: var(--brand);
-  border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 2px #e0e4f3;
-}
+    .btn {
+      padding: 14px 18px;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+    }
 
-.timeline-content {
-  background: #fff;
-  border: 1px solid #edf0fb;
-  border-radius: 12px;
-  padding: 18px 20px;
-  box-shadow: var(--shadow);
-}
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
 
-.timeline-content h3 {
-  margin: 0 0 6px;
-}
+    .btn.outline {
+      background: #fff;
+      color: var(--brand);
+      border: 1px solid var(--brand);
+      box-shadow: none;
+    }
 
-.timeline-content .meta {
-  font-size: 14px;
-  color: #666c80;
-  margin: 0 0 12px;
-}
+    .button {
+      padding: 10px 16px;
+      margin: 0 16px 16px;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+    }
 
+    .button:hover {
+      background: var(--brand-2);
+      text-decoration: none;
+    }
 
-  /* ===== Responsive ===== */
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr}
-    .about{grid-template-columns:1fr}
-    .title{font-size:40px}
-    .circle-wrap{ width:280px; aspect-ratio:1/1; min-height:0 !important; margin:0 auto; }
-  }
-</style>
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      padding: 80px 0 40px;
+      overflow: hidden;
+    }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
 
+    .title {
+      margin: 0 0 16px;
+      font-size: 54px;
+      line-height: 1.05;
+      color: #15172b;
+    }
+
+    .subtitle {
+      margin: 0 0 28px;
+      font-size: 18px;
+      color: #4a5066;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      background: var(--pill);
+      color: var(--brand);
+      border: 1px solid #e6eaff;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    /* ---------- Hero Photo + Social ---------- */
+    .circle-wrap {
+      position: relative;
+      width: clamp(220px, 30vw, 350px);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .circle-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px #fff, 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .circle-wrap img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 0 6px #fff, 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-left: 16px;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .badge:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .badge.github {
+      background: #0d1117;
+      color: #fff;
+    }
+
+    .badge.linkedin {
+      background: #0a66c2;
+      color: #fff;
+    }
+
+    .badge svg {
+      width: 18px;
+      height: 18px;
+      color: #fff;
+    }
+
+    /* ---------- Sections ---------- */
+    .section {
+      padding: 80px 0;
+      border-top: 1px solid var(--section-border);
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 34px;
+      color: #161827;
+    }
+
+    .section p.lead {
+      max-width: 780px;
+      color: #4d5369;
+    }
+
+    /* ---------- About ---------- */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-card {
+      padding: 22px;
+      background: linear-gradient(180deg, #fff, #fbfbff);
+      border: 1px solid #eef0fb;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card .lead {
+      display: block;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      color: #4d5369;
+    }
+
+    /* ---------- Reusable Grids ---------- */
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid.projects {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* ---------- Cards ---------- */
+    .card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .card .thumb {
+      display: grid;
+      place-items: center;
+      height: 160px;
+      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2) 60%, var(--gradient-3));
+    }
+
+    .card h3 {
+      margin: 16px 16px 6px;
+    }
+
+    .card p {
+      margin: 0 16px 18px;
+      color: #555c71;
+      line-height: 1.55;
+    }
+
+    .card p:last-of-type {
+      flex-grow: 1;
+    }
+
+    /* ---------- Skills ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .skill {
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .skill h4 {
+      margin: 4px 0 8px;
+    }
+
+    /* ---------- Leadership ---------- */
+    .leadership {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .lead-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e9ecfa;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .lead-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .lead-card .body {
+      padding: 14px 16px 18px;
+    }
+
+    .lead-card h3 {
+      margin: 4px 0 6px;
+    }
+
+    .lead-card .subimg {
+      display: block;
+      width: 100%;
+      height: 180px;
+      margin-top: 12px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* ---------- Lists / Misc ---------- */
+    .list {
+      padding-left: 18px;
+    }
+
+    .list li {
+      margin: 6px 0;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #6c7390;
+    }
+
+    .icons {
+      opacity: 0.8;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    /* ---------- Timeline ---------- */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 30px;
+      border-left: 2px solid #e0e4f3;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 5px;
+      left: -11px;
+      width: 18px;
+      height: 18px;
+      background: var(--brand);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #e0e4f3;
+    }
+
+    .timeline-content {
+      padding: 18px 20px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 6px;
+    }
+
+    .timeline-content .meta {
+      margin: 0 0 12px;
+      font-size: 14px;
+      color: #666c80;
+    }
+
+    /* ---------- Modal ---------- */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      display: block;
+      max-width: 90%;
+      max-height: 85vh;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* ---------- Contact / Footer ---------- */
+    .contact {
+      background: linear-gradient(180deg, #0f1320, #171a2d);
+      color: #fff;
+    }
+
+    .contact .inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .contact a {
+      color: #fff;
+    }
+
+    footer {
+      padding: 26px 0;
+      color: #6f7590;
+      text-align: center;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .title {
+        font-size: 40px;
+      }
+
+      .circle-wrap {
+        width: 280px;
+        aspect-ratio: 1 / 1;
+        min-height: 0 !important;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- NAV -->
@@ -218,48 +537,41 @@
     </div>
   </header>
 
-<!-- HERO -->
+
+  <!-- HERO -->
 <section class="hero container">
   <div class="hero-grid">
     <div>
       <div class="pill">Data Engineer • Data Scientist</div>
       <h1 class="title">Passionate about collecting, building, and delivering data that turns into meaningful solutions.</h1>
       <p class="subtitle">Experienced in Python, SQL, and ETL pipelines — building reliable data systems and dashboards that power smarter decisions.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <a class="btn" href="assets/Kaitlyn_Widjaja_Resume.pdf" download>Download resume</a>
         <a class="btn outline" href="#portfolio">View projects</a>
       </div>
     </div>
-    <!-- Photo + Badges -->
+
     <div style="display:flex; align-items:center; gap:16px;">
-      <!-- Circle photo -->
-      <div class="circle-wrap" style="width:clamp(220px, 30vw, 350px); aspect-ratio:1/1;">
-        <img src="assets/kait.jpg" alt="Kaitlyn Widjaja" loading="lazy"
-             style="width:100%; height:100%; border-radius:50%; object-fit:cover; display:block;">
+      <div class="circle-wrap">
+        <img src="assets/kait.jpg" alt="Kaitlyn Widjaja" loading="lazy" />
       </div>
-    
-      <!-- Badges to the right -->
-      <div class="badge-links" style="display:flex; flex-direction:column; gap:12px;">
-        <a class="badge github" href="https://github.com/kaitlynhuang26" aria-label="GitHub">
-          <!-- GitHub SVG -->
+
+      <div class="badge-links">
+        <a class="badge github" href="https://github.com/kaitlynhuang26" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.35-1.75-1.35-1.75-1.1-.75.08-.74.08-.74 1.22.09 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.25-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.78.84 1.25 1.91 1.25 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/>
           </svg>
         </a>
-    
-        <a class="badge linkedin" href="https://www.linkedin.com/in/kaitlynwidjaja" aria-label="LinkedIn">
-          <!-- LinkedIn SVG -->
+
+        <a class="badge linkedin" href="https://www.linkedin.com/in/kaitlynwidjaja" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.43V21h-4v-5.62c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96V21H9z"/>
           </svg>
         </a>
       </div>
     </div>
-
   </div>
 </section>
-
-
 
 
 
@@ -273,7 +585,7 @@
 
     <ul class="list">
       <li><strong>Toolbox:</strong> Python, SQL, Apache Spark (PySpark & Spark SQL), Pandas/NumPy, FastAPI, Django, Scikit-learn, PyTorch, REST APIs, React.js </li>
-      <li><strong>Infra:</strong> ETL, Data Pipeline Design, Data Waregousing, Data Modeling, AWS (RDS, S3), Apache Hive, ClickHouse, MySQL/Postgres, MongoDB, Docker, Kubernetes</li>
+      <li><strong>Infra:</strong> ETL, Data Pipeline Design, Data Warehousing, Data Modeling, AWS (RDS, S3), Apache Hive, ClickHouse, MySQL/Postgres, MongoDB, Docker, Kubernetes</li>
       <li><strong>Data Visualization & Tools:</strong> Tableau, Grafana, Matplotlib/Seaborn</li>
       <li><strong>Languages:</strong> English (Fluent), Indonesian (Native), Chinese (Conversational)</li>
     </ul>
@@ -298,8 +610,8 @@
         <h3>LG Nova — Data Engineer Intern</h3>
         <p class="meta">Berkeley, CA • Aug 2025 – Dec 2025</p>
         <ul>
-          <li>Built automated <strong>ETL pipelines</strong> to ingest and structure API data into PostgreSQL, transforming disorganized datasets into a single source of truth, enhancing data reliability, and enabling faster dashboard insights for stakeholders</li>
-          <li>Built and tested an end-to-end <strong> RAG model </strong> using consolidated datasets to evaluate retrieval accuracy and response quality</li>
+          <li>Built automated <strong>ETL pipelines</strong> to ingest and structure API data into PostgreSQL, transforming disorganized datasets into a single source of truth for downstream analytics and dashboards.</li>
+          <li>Built data pipelines and tested an end-to-end <strong>RAG model</strong> using consolidated datasets to improve retrieval quality, evaluate response accuracy, and support downstream model performance.</li> 
         </ul>
       </div>
     </div>
@@ -378,180 +690,245 @@
 </section>
 
 
-  <!-- PORTFOLIO / PROJECTS -->
+
+<!-- PORTFOLIO / PROJECTS -->
 <section class="section container" id="portfolio">
   <h2>Portfolio</h2>
-  <p class="lead">A few highlights. </p>
-  <div class="grid projects" id="projects">
+  <p class="lead">A selection of industry, analytics, and research projects.</p>
 
-    <!-- TikTok Internship -->
-    <article class="card">
-      <div class="thumb">
-      <img src="assets/tiktoklogo.jpg" alt="Tiktok logo" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-      </div>
-      <h3>TikTok Storage Observability</h3>
-  <p>
-    I built an <strong>end-to-end ETL pipeline</strong> that pulled data from APIs, processed it with 
-    <strong>Spark</strong> and <strong>SQL</strong>, and integrated it into a seamless workflow for 
-    <strong>data integration and dashboarding</strong>. The result was real-time visibility into TikTok’s 
-    storage systems. What used to take Site Reliability Engineers over an hour to investigate now takes just 
-    <strong>2 minutes</strong> — a <strong>96%</strong> drop in incident response time. These dashboards and pipelines 
-    are projected to save <strong>millions</strong> in infrastructure costs. I also automated compliance and legal 
-    inquiry workflows, improving transparency and saving <strong>40–100</strong> manual hours per request.
-  </p>
-    </article>
-
-    <!-- NLP / ML -->
-    <article class="card">
-      <div class="thumb">
-      <img src="assets/kmeans.png" alt="Clustering Speech Segments screenshot" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-      </div>
-      <h3>Speech Quality & Fraud Signals</h3>
-      <p>
-        I built backend APIs with <strong>FastAPI</strong> and <strong>PostgreSQL</strong> to support multimodal speech and behavioral analysis. 
-        Using <strong>NLP</strong> and <strong>ML</strong> techniques, I enabled real-time anomaly and fraud detection for online interviews. 
-        I also developed analytics pipelines to process <strong>speech</strong> and <strong>gaze data</strong>, turning them into actionable performance insights 
-        that made evaluations more consistent, reliable, and scalable.
-      </p>
-    </article>
-
-    <!-- HS Code Assistant -->
-    <article class="card">
-      <div class="thumb">
-      <img src="assets/excidiabanner.jpeg" alt="excidia banner" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-      </div>
-      <h3>AI Customs HS-Code Assistant</h3>
-      <p>
-  I built <strong>Python scripts</strong> to scrape, validate, and structure datasets of <strong>5,000+ Harmonized System (HS) Codes</strong> for goods, ensuring accuracy and removing duplicates. 
-  I then <strong>evaluated ML models</strong> and collaborated with engineers to design a chatbot for automated HS code classification, making it easier for businesses to navigate customs. 
-  This project was <strong>selected as one of 50 startups</strong> in Berkeley SkyDeck’s Batch 19 Pad-13 Incubator Program, where I met with importers and exporters to gather requirements 
-  and present AI-driven customs clearance solutions. It later evolved into <strong>Excidia</strong>, a vertical AI LLM Agent that serves as an assistance tool for everyone involved in international trade.
-</p>
-
-
-    </article>
-
-  <!-- Autocorrect -->
-<article class="card">
-  <div class="thumb">
-    <img src="assets/autocorrect.png" alt="Autocorrect Algorithm screenshot" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-  </div>
-  <h3>Autocorrect Algorithm</h3>
-<p>
-  Built an <strong>autocorrect algorithm</strong> and a <strong>real-time typing speed counter</strong> using advanced data structures in Python and error-correction models, 
-  improving accuracy and user experience for fast, interactive text input.
-</p>
-</article>
-
-<!-- Ants vs Bees -->
-<article class="card">
-  <div class="thumb">
-    <img src="assets/antsvsbees.gif" alt="Ants vs. Bees game GIF" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-  </div>
-  <h3>Ants vs. Bees</h3>
-<p>
-  Designed and built a <strong>Python</strong> strategy game inspired by “Plants vs. Zombies,” implementing complex game states, player actions, 
-  and custom characters like the QueenAnt to add depth and strategic gameplay.
-</p>
-</article>
-
-<!-- Pawty AI -->
-<article class="card">
-  <div class="thumb">
-    <img src="assets/pawtyimage.jpg" alt="Pawty AI example output" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">
-  </div>
-  <h3>Pawty AI</h3>
-<p>
-  Collaborated with engineers to build <strong>Pawty.ai</strong>, a computer vision system that transforms dog images into animated outputs using <strong>Stable Diffusion</strong>. 
-  The feature drove a <strong>15% increase</strong> in user engagement and a <strong>10% boost</strong> in user acquisition.
-</p>
-  <a href="https://pawty.ai/" class="button">Visit Website</a>
-</article>
-
-<!-- Datathon: Road Safety -->
-<article class="card">
-  <div class="thumb">
-    <span>EDA • NumPy • Pandas</span>
-  </div>
-  <h3>Road Safety Improvement</h3>
-<p>
-  Earned <strong>2nd place</strong> at a Datathon by analyzing highway crash data with <strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>Matplotlib</strong>. 
-  Our team identified key factors such as crash location, highway lane count, and driver behavior, and delivered <strong>10+ actionable recommendations</strong> 
-  to improve road safety and reduce accident risks.
-</p>
-  <a href="assets/ShowcaseBeamTeam.pdf" class="button">View Project</a>
-</article>
-
-<!-- Dog Boarding Dashboard -->
-<article class="card">
-  <div class="thumb">
-    <span>Tableau Dashboard</span>
-  </div>
-  <h3>Dog Boarding Dashboard</h3>
-<p>
-  Built an <strong>interactive dashboard</strong> to track customer behavior and key performance indicators (KPIs). 
-  The insights informed <strong>resource planning</strong> and <strong>marketing strategy</strong>, leading to a <strong>10% increase</strong> in subscribers.
-</p>
-  <a href="assets/Dashboard.pdf" class="button">View Dashboard</a>
-</article>
-
-<!-- SAS Research -->
-<article class="card">
-  <div class="thumb">
-    <span>SAS • Research • Statistics</span>
-  </div>
-  <h3>Analyzing Family Incarceration</h3>
-<p>
-  Conducted a statistical analysis in <strong>SAS</strong> to examine how <strong>father imprisonment</strong> and <strong>parent–child closeness</strong> affect the likelihood of child incarceration. 
-  Applied regression models, cleaned and visualized longitudinal survey data, and uncovered significant correlations that emphasized the impact of family dynamics on future incarceration risks.
-</p>
-  <a href="assets/ResearchSASsoftware.pdf" class="button">View Research</a>
-</article>
-
-<!-- Bike Sharing -->
-<article class="card">
-  <div class="thumb">
-    <span>EDA • Pandas</span>
-  </div>
-  <h3>Bike Sharing Demand</h3>
-<p>
-  Performed an <strong>exploratory data analysis</strong> of bike-sharing usage patterns, examining <strong>weather conditions</strong> and <strong>seasonality effects</strong> on demand. 
-  The findings informed strategies for <strong>service planning</strong> and resource allocation to better match supply with rider needs.
-</p>
-  <a href="assets/bike sharing analysis.ipynb" class="button">View Analysis</a>
-</article>
-
-<!-- Chicago Crime SQL -->
-<article class="card">
-  <div class="thumb">
-    <span>SQL</span>
-  </div>
-  <h3>Chicago Crime Analysis</h3>
-<p>
-  Queried <strong>Chicago crime datasets</strong> to analyze trends by <strong>crime type</strong>, <strong>location</strong>, and <strong>seasonality</strong>. 
-  Produced data-driven insights to support more effective, targeted community safety initiatives and resource allocation.
-</p>
-  <a href="assets/crime_chicago_sql.ipynb" class="button">View SQL Analysis</a>
-</article>
-
-<!-- Regression -->
-<article class="card">
-  <div class="thumb">
-    <span>Regression • StatsModels</span>
-  </div>
-  <h3>Regression Analysis</h3>
-<p>
-  Built and evaluated <strong>linear</strong> and <strong>multiple regression models</strong> using <strong>Pandas</strong>, <strong>NumPy</strong>, and <strong>StatsModels</strong>. 
-  Interpreted coefficients and statistical outputs to generate actionable insights, including an analysis based on the classic <strong>Card & Krueger (1994)</strong> study 
-  of the relationship between <strong>minimum wage increases</strong> and <strong>employment</strong>, and validated their findings on modern datasets.
-</p>
-  <a href="assets/Regression analysis.ipynb" class="button">View Notebook</a>
-</article>
-
-
-  </div>
+  <div id="portfolio-sections"></div>
 </section>
-  
+
+
+ 
+  <script>
+  const PROJECT_SECTIONS = [
+    {
+      title: "Featured Experience",
+      subtitle: "Production-facing work, internships, startups, and applied AI projects.",
+      projects: [
+        {
+          title: "TikTok Storage Observability",
+          stack: "Spark • SQL • ETL • Dashboards",
+          image: "assets/tiktoklogo.jpg",
+          imageAlt: "TikTok logo",
+          description: `Built an <strong>end-to-end ETL pipeline</strong> using <strong>Spark</strong> and <strong>SQL</strong> to integrate API data into dashboards for TikTok storage observability. 
+          The system gave SREs real-time visibility into infrastructure health and reduced investigation time from over an hour to <strong>2 minutes</strong> — a <strong>96%</strong> improvement. 
+          I also automated compliance workflows, saving <strong>40–100 manual hours</strong> per request.`,
+          link: ""
+        },
+        {
+          title: "Speech Quality & Fraud Signals",
+          stack: "FastAPI • PostgreSQL • NLP • ML",
+          image: "assets/kmeans.png",
+          imageAlt: "Speech clustering screenshot",
+          description: `Built backend APIs with <strong>FastAPI</strong> and <strong>PostgreSQL</strong> to support multimodal speech and behavioral analysis. 
+          Developed analytics pipelines using <strong>NLP</strong> and <strong>ML</strong> to process speech and gaze data for anomaly and fraud detection. 
+          The system improved evaluation consistency and made interview analysis more scalable.`,
+          buttonText: "View Project",
+          link: "assets/CDSS_Symposium_Project.pdf",
+          linkType: "pdf"
+        },
+        {
+          title: "AI Customs HS-Code Assistant",
+          stack: "Python • ML • Weaviate • RAG",
+          image: "assets/excidiabanner.jpeg",
+          imageAlt: "Excidia banner",
+          description: `Built <strong>ETL pipelines</strong> to scrape, validate, and structure <strong>5,000+ HS codes</strong>, improving data accuracy and removing duplicates. 
+          Designed <strong>ML models</strong> and an <strong>RAG-based chatbot</strong> using <strong>Weaviate vector search</strong> to automate HS code classification and support customs guidance. 
+           Selected as one of <strong>50 startups</strong> in Berkeley SkyDeck’s Batch 19 Pad-13 Incubator Program, where I presented our data pipeline architecture and AI customs solution to importers, exporters, and investors.`
+        },
+        {
+          title: "Pawty AI",
+          stack: "Computer Vision • Stable Diffusion • Product Analytics",
+          image: "assets/pawtyimage.jpg",
+          imageAlt: "Pawty AI output",
+          description: "Collaborated on a computer vision feature that transformed dog images into animated outputs, increasing user engagement by 15% and user acquisition by 10%.",
+          buttonText: "Visit Website",
+          link: "https://pawty.ai/",
+          linkType: "live"
+        },
+        {
+          title: "Postura – AI Posture Necklace",
+          stack: "FastAPI • BLE • WebSocket • React • Product Strategy • Market Validation",
+          image: "assets/aligne_pic.jpeg",
+          imageAlt: "Postura screenshot",
+          description: "Built a FastAPI backend with BLE and WebSocket pipelines to process 5,000+ high-frequency sensor readings per minute, powering real-time AI posture feedback and a React analytics dashboard. Also contributed to the product pitch, market positioning, and investor story for Aligné, connecting the technical prototype to a clear business vision.",
+          buttonText: "View Project",
+          link: "https://github.com/kaitlynhuang26/cal_hacks",
+          secondButtonText: "View Pitch Deck",
+          secondLink: "assets/Aligne_Pitch_Deck.pdf"
+        }
+      ]
+    },
+    {
+      title: "Data Science & Analytics Projects",
+      subtitle: "Dashboards, modeling, EDA, SQL analysis, and business insights.",
+      projects: [
+        {
+          title: "Road Safety Improvement",
+          stack: "Pandas • NumPy • Matplotlib • EDA",
+          image: "assets/road_safety_image.jpeg",
+          imageAlt: "Road safety improvement image",
+          description: "Earned 2nd place at a datathon by analyzing crash data and identifying key factors like lane count, location, and driver behavior, leading to 10+ actionable safety recommendations.",
+          buttonText: "View PDF",
+          link: "assets/ShowcaseBeamTeam.pdf",
+          linkType: "pdf"
+        },
+        {
+          title: "Dog Boarding Dashboard",
+          stack: "Tableau • SQL • KPI Analytics",
+          image: "assets/pawty_dashboard_pic.jpeg",
+          imageAlt: "Pawty AI dashboard",
+          description: "Built an interactive dashboard to track customer behavior and KPIs, helping inform marketing and resource planning decisions that increased subscribers by 10%.",
+          buttonText: "View Dashboard",
+          link: "assets/pawty_example_dashboard.pdf",
+          linkType: "pdf"
+        },
+        {
+          title: "Bike Sharing Demand",
+          stack: "Pandas • EDA • Forecasting Insights",
+          image: "",
+          imageAlt: "",
+          description: "Explored bike-sharing usage patterns and analyzed the effects of weather and seasonality to support smarter resource allocation and service planning.",
+          buttonText: "View Notebook",
+          link: "",
+          linkType: "notebook"
+        },
+        {
+          title: "Chicago Crime Analysis",
+          stack: "SQL • Data Analysis • Public Data",
+          image: "",
+          imageAlt: "",
+          description: "Queried Chicago crime datasets to analyze crime trends across type, location, and seasonality, producing insights for targeted safety and resource planning.",
+          buttonText: "View Notebook",
+          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/crime_chicago_sql.ipynb",
+          linkType: "notebook"
+        },
+        {
+          title: "Regression Analysis",
+          stack: "StatsModels • Pandas • NumPy",
+          image: "",
+          imageAlt: "",
+          description: "Built linear and multiple regression models, interpreted coefficients and outputs, and applied the framework to study minimum wage and employment effects.",
+          buttonText: "View Notebook",
+          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Regression%20analysis.ipynb",
+          linkType: "notebook"
+        },
+        {
+          title: "Customer Segmentation & Sales Prediction",
+          stack: "K-means • Python • ML • Forecasting",
+          image: "",
+          imageAlt: "Customer segmentation visualization",
+          description: "Built a cluster-then-predict framework using customer segmentation and segment-specific models to forecast purchase behavior and improve targeting decisions.",
+          buttonText: "View Project",
+          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/customer_segmentation.ipynb",
+          secondButtonText: "View Presentation",
+          secondLink: "assets/customer_segmentation_slides.pdf"
+        }
+      ]
+    },
+    {
+      title: "Research & Academic Foundations",
+      subtitle: "Research, statistics, and foundational CS projects.",
+      projects: [
+        {
+          title: "Analyzing Family Incarceration",
+          stack: "SAS • Regression • Research",
+          image: "",
+          imageAlt: "",
+          description: "Used SAS to analyze the relationship between father imprisonment, parent–child closeness, and future incarceration risk using longitudinal survey data.",
+          buttonText: "View Research",
+          link: "assets/ResearchSASsoftware.pdf",
+          linkType: "pdf"
+        },
+        {
+          title: "Impact of Educational Games",
+          stack: "Research • Data Analysis • Education",
+          image: "assets/educational_games.jpg",
+          imageAlt: "Educational games project",
+          description: "Led an 11-member team analyzing how classroom games affected engagement and grades, contributing to a 40% increase in interaction and a 200% increase in A grades."
+        },
+        {
+          title: "Autocorrect Algorithm",
+          stack: "Python • Data Structures • Text Processing",
+          image: "assets/autocorrect.png",
+          imageAlt: "Autocorrect screenshot",
+          description: "Built an autocorrect system and real-time typing speed counter using Python and error-correction logic to improve fast interactive text input."
+        },
+        {
+          title: "Ants vs. Bees",
+          stack: "Python • OOP • Game Logic",
+          image: "assets/antsvsbees.gif",
+          imageAlt: "Ants vs Bees game",
+          description: "Designed a strategy game inspired by Plants vs. Zombies, implementing custom game logic, player actions, and object-oriented mechanics."
+        }
+      ]
+    }
+  ];
+
+  function renderPortfolio() {
+    const container = document.getElementById("portfolio-sections");
+
+    PROJECT_SECTIONS.forEach(section => {
+      const sectionEl = document.createElement("div");
+      sectionEl.style.marginBottom = "56px";
+
+      sectionEl.innerHTML = `
+        <div style="margin-bottom:20px;">
+          <h3 style="font-size:28px; margin:0 0 8px; color:#161827;">${section.title}</h3>
+          <p style="margin:0; color:#5a6175;">${section.subtitle}</p>
+        </div>
+        <div class="grid projects"></div>
+      `;
+
+      const grid = sectionEl.querySelector(".grid.projects");
+
+      section.projects.forEach(project => {
+        const hasImage = project.image && project.image.trim() !== "";
+
+        const thumbHTML = hasImage
+          ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">`
+          : `<span>${project.stack}</span>`;
+
+        const primaryButton =
+  project.link && project.link !== "PUT_LINK_HERE"
+    ? `<a href="${project.link}" class="button" target="_blank" rel="noopener noreferrer">${project.buttonText || "View Project"}</a>`
+    : "";
+
+const secondaryButton =
+  project.secondLink && project.secondLink !== "PUT_LINK_HERE"
+    ? `<a href="${project.secondLink}" class="button" target="_blank" rel="noopener noreferrer">${project.secondButtonText || "View More"}</a>`
+    : "";
+
+const buttonHTML = `
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin: 0 16px 16px;">
+    ${primaryButton}
+    ${secondaryButton}
+  </div>
+`;
+
+        const card = document.createElement("article");
+        card.className = "card";
+      card.innerHTML = `
+        <div class="thumb">${thumbHTML}</div>
+        <h3>${project.title}</h3>
+        <p style="margin:0 16px 8px; font-size:14px; color:#4f46e5; font-weight:600;">${project.stack}</p>
+        <p>${project.description}</p>
+        ${buttonHTML}
+      `;
+
+        grid.appendChild(card);
+      });
+
+      container.appendChild(sectionEl);
+    });
+  }
+
+  renderPortfolio();
+</script>
+
+
 <!-- SKILLS -->
 <section class="section container" id="skills">
   <h2>Skillset</h2>
@@ -664,43 +1041,21 @@
   </footer>
 
   <script>
-    // dynamic year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Lightweight client-side project injection (optional):
-    // Add your projects as objects below and they will render automatically.
-    const PROJECTS = [
-      // Example:
-      // { title: 'My Cool Pipeline', tag: 'Data Pipeline', blurb: 'Airflow + Spark batch job processing 2B rows/day.', url: 'https://github.com/...' }
-    ];
-
-    const grid = document.getElementById('projects');
-    if (PROJECTS.length) {
-      grid.innerHTML = '';
-      PROJECTS.forEach(p => {
-        const el = document.createElement('article');
-        el.className = 'card';
-        el.innerHTML = `
-          <div class="thumb"><span>${p.tag||'Project'}</span></div>
-          <h3>${p.url ? `<a href="${p.url}">${p.title}</a>` : p.title}</h3>
-          <p>${p.blurb||''}</p>
-        `;
-        grid.appendChild(el);
-      });
-    }
-  </script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+  
 <div id="imageModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
 </div>
 
 <script>
-  function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.style.display = 'none';
-    });
-    document.getElementById(sectionId).style.display = 'block';
-  }
+  // function showSection(sectionId) {
+  //   document.querySelectorAll('.section').forEach(section => {
+  //     section.style.display = 'none';
+  //   });
+  //   document.getElementById(sectionId).style.display = 'block';
+  // }
 
   function openModal(src) {
     document.getElementById('imageModal').style.display = 'block';
