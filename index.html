@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kaitlyn Widjaja — Data Engineer & Data Scientist</title>
+  <title>Kaitlyn Widjaja - Data Engineer & Data Scientist</title>
   <meta
     name="description"
-    content="Portfolio of Kaitlyn Widjaja — Data Engineering, Data Science, Leadership, Projects, and Contact."
+    content="Portfolio of Kaitlyn Widjaja - Data Engineering, Data Science, Leadership, Projects, and Contact."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,516 +18,963 @@
 
   <style>
     :root {
-      --bg: #0b0b12;
-      --ink: #0f1021;
-      --ink-2: #1e2030;
-      --text: #12131a;
-      --muted: #5a6175;
-      --brand: #4f46e5;
-      --brand-2: #7c3aed;
-      --pill: #eef2ff;
-      --card: #ffffff;
-      --accent: #a78bfa;
-      --gradient-1: #e9e7ff;
-      --gradient-2: #e8f0ff;
-      --gradient-3: #f6f7ff;
-      --shadow: 0 10px 30px rgba(8, 10, 36, 0.08);
-      --border: #edf0fb;
-      --section-border: #f3f4f8;
+      --bg: #f7f9fb;
+      --surface: #ffffff;
+      --surface-2: #f1f5f9;
+      --ink: #101828;
+      --muted: #5f6c80;
+      --brand: #3346d3;
+      --brand-dark: #18226c;
+      --teal: #0891b2;
+      --coral: #e95f3f;
+      --gold: #d99621;
+      --green: #0f8a5f;
+      --lavender: #8b5cf6;
+      --line: #dfe6ef;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 10px 28px rgba(15, 23, 42, 0.06);
+      --radius: 10px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html,
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background: #fff;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16, 24, 40, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16, 24, 40, 0.035) 1px, transparent 1px),
+        var(--bg);
+      background-size: 44px 44px;
     }
 
     a {
-      color: var(--brand);
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
-      max-width: 1100px;
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 0 24px;
     }
 
-    /* ---------- Navigation ---------- */
-    header.nav {
+    .nav {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: saturate(150%) blur(8px);
-      border-bottom: 1px solid #f1f1f8;
+      z-index: 20;
+      border-bottom: 1px solid rgba(223, 230, 239, 0.9);
+      background: rgba(247, 249, 251, 0.84);
+      backdrop-filter: blur(18px);
     }
 
-    header .inner {
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
+      min-height: 68px;
+      gap: 22px;
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 800;
-      letter-spacing: 0.2px;
+      color: var(--brand-dark);
     }
 
-    .navlinks a {
-      margin-left: 20px;
-      font-weight: 600;
-      color: #1a1c29;
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--teal));
+      box-shadow: 0 10px 22px rgba(51, 70, 211, 0.22);
     }
 
-    /* ---------- Buttons ---------- */
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .navlinks a:hover {
+      color: var(--brand);
+    }
+
+    .hero {
+      position: relative;
+      padding: 72px 0 52px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 520px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(233, 95, 63, 0.14), transparent 24%),
+        radial-gradient(circle at 86% 22%, rgba(8, 145, 178, 0.16), transparent 28%),
+        linear-gradient(135deg, #ffffff, #eef6ff 54%, #fff7ed);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(51, 70, 211, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 18px 0 18px;
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      color: #0f172a;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(120deg, var(--brand), var(--teal), var(--coral));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 0 0 28px;
+      color: #475569;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-actions,
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
     .btn,
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: 0.2s ease;
-      text-decoration: none;
-      cursor: pointer;
+      min-height: 44px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      padding: 12px 16px;
+      font-weight: 800;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
 
     .btn {
-      padding: 14px 18px;
-      background: var(--brand);
       color: #fff;
-      border: none;
-      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+      background: var(--brand);
+      box-shadow: 0 14px 28px rgba(51, 70, 211, 0.22);
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      text-decoration: none;
+    .btn:hover,
+    .button:hover,
+    .project-card:hover {
+      transform: translateY(-3px);
     }
 
     .btn.outline {
+      color: var(--brand-dark);
       background: #fff;
-      color: var(--brand);
-      border: 1px solid var(--brand);
-      box-shadow: none;
+      border-color: rgba(51, 70, 211, 0.2);
+      box-shadow: var(--shadow-soft);
     }
 
-    .button {
-      padding: 10px 16px;
-      margin: 0 16px 16px;
-      background: var(--brand);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .button:hover {
-      background: var(--brand-2);
-      text-decoration: none;
-    }
-
-    /* ---------- Hero ---------- */
-    .hero {
+    .hero-card {
       position: relative;
-      padding: 80px 0 40px;
+      min-height: 470px;
+      padding: 18px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 32px;
-      align-items: center;
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 12px;
+      background:
+        linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
     }
 
-    .title {
-      margin: 0 0 16px;
-      font-size: 54px;
-      line-height: 1.05;
-      color: #15172b;
-    }
-
-    .subtitle {
-      margin: 0 0 28px;
-      font-size: 18px;
-      color: #4a5066;
-    }
-
-    .pill {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 8px 12px;
-      background: var(--pill);
-      color: var(--brand);
-      border: 1px solid #e6eaff;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-
-    /* ---------- Hero Photo + Social ---------- */
-    .circle-wrap {
-      position: relative;
-      width: clamp(220px, 30vw, 350px);
+    .portrait-frame {
+      position: absolute;
+      top: 42px;
+      right: 42px;
+      width: min(265px, 66%);
       aspect-ratio: 1 / 1;
-      margin: 0 auto 16px;
-      border-radius: 50%;
+      border: 8px solid #fff;
+      border-radius: 18px;
       overflow: hidden;
+      box-shadow: 0 26px 42px rgba(15, 23, 42, 0.18);
+      z-index: 2;
     }
 
-    .circle-wrap img {
-      display: block;
+    .portrait-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 0 0 6px #fff, 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .circle-wrap img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 0 6px #fff, 0 12px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .badge-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-left: 16px;
-    }
-
-    .badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #fff;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .badge:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    }
-
-    .badge.github {
-      background: #0d1117;
-      color: #fff;
-    }
-
-    .badge.linkedin {
-      background: #0a66c2;
-      color: #fff;
-    }
-
-    .badge svg {
-      width: 18px;
-      height: 18px;
-      color: #fff;
-    }
-
-    /* ---------- Sections ---------- */
-    .section {
-      padding: 80px 0;
-      border-top: 1px solid var(--section-border);
-    }
-
-    .section h2 {
-      margin: 0 0 18px;
-      font-size: 34px;
-      color: #161827;
-    }
-
-    .section p.lead {
-      max-width: 780px;
-      color: #4d5369;
-    }
-
-    /* ---------- About ---------- */
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .about-card {
-      padding: 22px;
-      background: linear-gradient(180deg, #fff, #fbfbff);
-      border: 1px solid #eef0fb;
-      border-radius: 16px;
+    .metric-panel {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      z-index: 3;
+      width: min(310px, calc(100% - 48px));
+      padding: 18px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 12px;
+      background: #ffffff;
       box-shadow: var(--shadow);
     }
 
-    .about-card .lead {
+    .metric-panel strong {
       display: block;
-      width: 100%;
-      max-width: none;
-      margin-bottom: 16px;
-      line-height: 1.6;
-      color: #4d5369;
+      margin-bottom: 8px;
+      font-size: 32px;
+      line-height: 1;
+      color: var(--brand-dark);
     }
 
-    /* ---------- Reusable Grids ---------- */
-    .grid {
+    .metric-panel span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .pipeline {
+      position: absolute;
+      left: 34px;
+      top: 76px;
+      z-index: 1;
       display: grid;
-      gap: 22px;
+      gap: 16px;
     }
 
-    .grid.projects {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    /* ---------- Cards ---------- */
-    .card {
+    .pipeline-step {
       display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
+      align-items: center;
+      gap: 10px;
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: #334155;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: var(--shadow-soft);
     }
 
-    .card .thumb {
+    .step-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      background: var(--teal);
+    }
+
+    .pipeline-step:nth-child(2) .step-icon {
+      background: var(--coral);
+    }
+
+    .pipeline-step:nth-child(3) .step-icon {
+      background: var(--green);
+    }
+
+    .social-row {
+      margin-top: 22px;
+    }
+
+    .social-row a {
+      color: #334155;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 72px 0;
+      border-top: 1px solid rgba(223, 230, 239, 0.9);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .about-panel {
       display: grid;
-      place-items: center;
-      height: 160px;
-      background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2) 60%, var(--gradient-3));
+      grid-template-columns: 1fr 0.88fr;
+      gap: 24px;
+      align-items: stretch;
     }
 
-    .card h3 {
-      margin: 16px 16px 6px;
+    .story-card,
+    .toolbox-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
     }
 
-    .card p {
-      margin: 0 16px 18px;
-      color: #555c71;
-      line-height: 1.55;
+    .story-card {
+      padding: 28px;
     }
 
-    .card p:last-of-type {
-      flex-grow: 1;
+    .story-card p {
+      margin: 0 0 18px;
+      color: #405064;
+      line-height: 1.75;
     }
 
-    /* ---------- Skills ---------- */
-    .skills {
+    .signal-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .signal {
+      padding: 14px;
+      border-radius: 9px;
+      background: var(--surface-2);
+    }
+
+    .signal strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #0f172a;
+      font-size: 20px;
+    }
+
+    .signal span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .toolbox-card {
+      padding: 18px;
+    }
+
+    .toolbox-group {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toolbox-group:last-child {
+      border-bottom: 0;
+    }
+
+    .toolbox-group h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      color: #334155;
+      background: #eef6ff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .chip.warm {
+      background: #fff0e8;
+      color: #9a3412;
+    }
+
+    .chip.green {
+      background: #e9fbf2;
+      color: #047857;
+    }
+
+    .chip.violet {
+      background: #f1edff;
+      color: #6d28d9;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
       gap: 18px;
     }
 
-    .skill {
-      padding: 18px;
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .timeline-date {
+      position: sticky;
+      top: 92px;
+      padding: 10px 12px;
+      border-left: 4px solid var(--coral);
+      color: #475569;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .timeline-content {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .timeline-content .meta {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .timeline-content ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+    .project-section {
+      margin-top: 42px;
+    }
+
+    .project-section:first-of-type {
+      margin-top: 0;
+    }
+
+    .project-section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .project-section-title h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .project-section-title p {
+      margin: 0;
+      max-width: 520px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .project-card:hover {
       box-shadow: var(--shadow);
     }
 
-    .skill h4 {
-      margin: 4px 0 8px;
+    .thumb {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+      background: #e9eef6;
     }
 
-    /* ---------- Leadership ---------- */
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
+
+    .data-visual {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand-dark), var(--teal));
+    }
+
+    .data-visual.warm {
+      background: linear-gradient(135deg, #7c2d12, var(--coral), #f59e0b);
+    }
+
+    .data-visual.green {
+      background: linear-gradient(135deg, #064e3b, var(--green), #38bdf8);
+    }
+
+    .data-visual.violet {
+      background: linear-gradient(135deg, #312e81, var(--lavender), #06b6d4);
+    }
+
+    .visual-bars {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      align-items: end;
+      gap: 8px;
+      height: 90px;
+    }
+
+    .visual-bars span {
+      width: 18px;
+      border-radius: 6px 6px 0 0;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .visual-label {
+      position: relative;
+      z-index: 1;
+      width: 68%;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .visual-grid {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .project-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 18px;
+    }
+
+    .project-body h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .stack {
+      margin: 0 0 12px;
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .project-body p {
+      margin: 0 0 16px;
+      color: #526174;
+      line-height: 1.62;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .button {
+      min-height: 38px;
+      padding: 9px 12px;
+      color: #fff;
+      background: #0f172a;
+      font-size: 13px;
+      box-shadow: none;
+    }
+
+    .button.secondary {
+      color: #0f172a;
+      background: #f1f5f9;
+      border-color: #dbe4ef;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .skill {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skill-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      color: #fff;
+      background: var(--brand);
+      font-weight: 900;
+    }
+
+    .skill:nth-child(2) .skill-icon {
+      background: var(--teal);
+    }
+
+    .skill:nth-child(3) .skill-icon {
+      background: var(--coral);
+    }
+
+    .skill:nth-child(4) .skill-icon {
+      background: var(--green);
+    }
+
+    .skill h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .skill p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
     .leadership {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
     }
 
     .lead-card {
+      grid-column: span 4;
       overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       background: #fff;
-      border: 1px solid #e9ecfa;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .lead-card.feature {
+      grid-column: span 6;
     }
 
     .lead-card img {
       width: 100%;
-      height: 170px;
+      height: 190px;
       object-fit: cover;
     }
 
-    .lead-card .body {
-      padding: 14px 16px 18px;
+    .lead-card.feature img {
+      height: 235px;
     }
 
-    .lead-card h3 {
-      margin: 4px 0 6px;
+    .lead-body {
+      padding: 18px;
     }
 
-    .lead-card .subimg {
-      display: block;
-      width: 100%;
-      height: 180px;
-      margin-top: 12px;
-      object-fit: cover;
-      border-radius: 12px;
+    .lead-body .tag {
+      display: inline-flex;
+      margin-bottom: 10px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #075985;
+      background: #e0f2fe;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
-    /* ---------- Lists / Misc ---------- */
-    .list {
-      padding-left: 18px;
+    .lead-body h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.32;
     }
 
-    .list li {
-      margin: 6px 0;
+    .lead-body p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
-    .small {
-      font-size: 12px;
-      color: #6c7390;
-    }
-
-    .icons {
-      opacity: 0.8;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    /* ---------- Timeline ---------- */
-    .timeline {
-      position: relative;
-      margin: 40px 0;
-      padding-left: 30px;
-      border-left: 2px solid #e0e4f3;
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      top: 5px;
-      left: -11px;
-      width: 18px;
-      height: 18px;
-      background: var(--brand);
-      border: 3px solid #fff;
-      border-radius: 50%;
-      box-shadow: 0 0 0 2px #e0e4f3;
-    }
-
-    .timeline-content {
-      padding: 18px 20px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-    }
-
-    .timeline-content h3 {
-      margin: 0 0 6px;
-    }
-
-    .timeline-content .meta {
-      margin: 0 0 12px;
-      font-size: 14px;
-      color: #666c80;
-    }
-
-    /* ---------- Modal ---------- */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-      padding: 40px;
-      background: rgba(0, 0, 0, 0.8);
-    }
-
-    .modal-content {
-      display: block;
-      max-width: 90%;
-      max-height: 85vh;
-      margin: auto;
-      border-radius: 12px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 28px;
-      color: #fff;
-      font-size: 36px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* ---------- Contact / Footer ---------- */
     .contact {
-      background: linear-gradient(180deg, #0f1320, #171a2d);
+      border-top: 0;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, #0f172a, #172554 55%, #164e63);
+      background-size: 36px 36px, 36px 36px, auto;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact h2 {
       color: #fff;
     }
 
-    .contact .inner {
+    .contact .lead {
+      color: #d5e3f1;
+      margin-top: 12px;
+    }
+
+    .contact-actions {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      justify-content: flex-end;
+      gap: 12px;
     }
 
-    .contact a {
+    .contact .btn.outline {
       color: #fff;
+      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: none;
     }
 
     footer {
       padding: 26px 0;
-      color: #6f7590;
+      color: #64748b;
       text-align: center;
+      font-size: 14px;
     }
 
-    /* ---------- Responsive ---------- */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      padding: 40px;
+      background: rgba(15, 23, 42, 0.86);
+    }
+
+    .modal-content {
+      max-width: 92%;
+      max-height: 86vh;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .close {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
     @media (max-width: 900px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .navlinks {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
       .hero-grid,
-      .about {
+      .about-panel,
+      .contact-inner {
         grid-template-columns: 1fr;
       }
 
-      .title {
-        font-size: 40px;
+      .hero-card {
+        min-height: 420px;
       }
 
-      .circle-wrap {
-        width: 280px;
-        aspect-ratio: 1 / 1;
-        min-height: 0 !important;
-        margin: 0 auto;
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-date {
+        position: static;
+      }
+
+      .section-header,
+      .project-section-title {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lead-card,
+      .lead-card.feature {
+        grid-column: span 12;
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero-card {
+        min-height: 500px;
+      }
+
+      .portrait-frame {
+        top: 26px;
+        right: 50%;
+        width: 230px;
+        transform: translateX(50%);
+      }
+
+      .pipeline {
+        left: 18px;
+        right: 18px;
+        top: 288px;
+      }
+
+      .metric-panel {
+        bottom: 18px;
+        left: 18px;
+        width: calc(100% - 36px);
+      }
+
+      .signal-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
-  <!-- NAV -->
   <header class="nav">
-    <div class="inner container">
-      <div class="brand">Kaitlyn Widjaja</div>
-      <nav class="navlinks">
+    <div class="nav-inner container">
+      <a class="brand" href="#top" aria-label="Kaitlyn Widjaja home">
+        <span class="brand-mark">KW</span>
+        <span>Kaitlyn Widjaja</span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
         <a href="#portfolio">Portfolio</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
@@ -537,590 +984,539 @@
     </div>
   </header>
 
-
-  <!-- HERO -->
-<section class="hero container">
-  <div class="hero-grid">
-    <div>
-      <div class="pill">Data Engineer • Data Scientist</div>
-      <h1 class="title">Passionate about collecting, building, and delivering data that turns into meaningful solutions.</h1>
-      <p class="subtitle">Experienced in Python, SQL, and ETL pipelines — building reliable data systems and dashboards that power smarter decisions.</p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="assets/Kaitlyn_Widjaja_Resume.pdf" download>Download resume</a>
-        <a class="btn outline" href="#portfolio">View projects</a>
-      </div>
-    </div>
-
-    <div style="display:flex; align-items:center; gap:16px;">
-      <div class="circle-wrap">
-        <img src="assets/kait.jpg" alt="Kaitlyn Widjaja" loading="lazy" />
-      </div>
-
-      <div class="badge-links">
-        <a class="badge github" href="https://github.com/kaitlynhuang26" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.35-1.75-1.35-1.75-1.1-.75.08-.74.08-.74 1.22.09 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.25-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.78.84 1.25 1.91 1.25 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/>
-          </svg>
-        </a>
-
-        <a class="badge linkedin" href="https://www.linkedin.com/in/kaitlynwidjaja" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.43V21h-4v-5.62c0-1.34-.02-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96V21H9z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ABOUT -->
-<section class="section container" id="about">
-  <h2>About me</h2>
-  <div class="about-card">
-    <p class="lead">
-      <strong>Hi, I’m Kaitlyn</strong> — a UC Berkeley Data Science student (’26) and recent Data Engineering intern at TikTok USDS. I enjoy designing reliable data systems and simple, thoughtful analytics that help teams move faster.
-    </p>
-
-    <ul class="list">
-      <li><strong>Toolbox:</strong> Python, SQL, Apache Spark (PySpark & Spark SQL), Pandas/NumPy, FastAPI, Django, Scikit-learn, PyTorch, REST APIs, React.js </li>
-      <li><strong>Infra:</strong> ETL, Data Pipeline Design, Data Warehousing, Data Modeling, AWS (RDS, S3), Apache Hive, ClickHouse, MySQL/Postgres, MongoDB, Docker, Kubernetes</li>
-      <li><strong>Data Visualization & Tools:</strong> Tableau, Grafana, Matplotlib/Seaborn</li>
-      <li><strong>Languages:</strong> English (Fluent), Indonesian (Native), Chinese (Conversational)</li>
-    </ul>
-
-    <h3>🎓 Education</h3>
-    <ul class="list">
-      <li>Data Science, B.A. — University of California, Berkeley (’26)</li>
-      <li>Mathematics and Economics, A.S. — Skyline College</li>
-    </ul>
-  </div>
-</section>
-
-<!-- JOB TIMELINE -->
-<section class="section container" id="experience">
-  <h2>Experience</h2>
-  <div class="timeline">
-
-      <!-- LG Nova -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>LG Nova — Data Engineer Intern</h3>
-        <p class="meta">Berkeley, CA • Aug 2025 – Dec 2025</p>
-        <ul>
-          <li>Built automated <strong>ETL pipelines</strong> to ingest and structure API data into PostgreSQL, transforming disorganized datasets into a single source of truth for downstream analytics and dashboards.</li>
-          <li>Built data pipelines and tested an end-to-end <strong>RAG model</strong> using consolidated datasets to improve retrieval quality, evaluate response accuracy, and support downstream model performance.</li> 
-        </ul>
-      </div>
-    </div>
-
-    <!-- TikTok -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>TikTok US Data Security — Data Engineer Intern</h3>
-        <p class="meta">San Jose, CA • May 2025 – Aug 2025</p>
-        <ul>
-          <li>Led the design of two high-impact dashboards for critical storage infrastructure, defining requirements and developing <strong>end-to-end ETL pipelines</strong> (Spark, SQL) to integrate multi-source data.</li>
-          <li>Reduced SRE on-call resolution time by <strong>96%</strong> (1 hour → 2 minutes), providing insights projected to save <strong>millions</strong> in infrastructure costs.</li>
-          <li>Automated compliance/legal inquiry workflows, improving visibility and saving <strong>40–100</strong> manual hours per request.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Qlay -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Qlay Technologies — Software Development Intern</h3>
-        <p class="meta">Berkeley, CA • Feb 2025 – May 2025</p>
-        <ul>
-          <li>Engineered an <strong>AI-powered speech analysis system</strong> (NLP, ML) to evaluate pronunciation, fluency, and behavioral patterns for anomaly/fraud detection.</li>
-          <li>Developed backend APIs with <strong>FastAPI</strong> and <strong>PostgreSQL</strong> for model integration, data collection, and analysis.</li>
-          <li>Created analytics pipelines to process <strong>speech</strong> and <strong>gaze data</strong>, generating actionable performance insights.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Excidia -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Excidia — Data Scientist</h3>
-        <p class="meta">Berkeley, CA • Nov 2024 – May 2025</p>
-        <ul>
-          <li>Built Python scripts to scrape, validate, and structure datasets of <strong>5,000+ Harmonized System (HS) Codes</strong>, ensuring accuracy and deduplication.</li>
-          <li>Evaluated ML model performance and collaborated with engineers to design a chatbot for automated HS code classification.</li>
-          <li>Selected as one of <strong>50 startups</strong> in Berkeley SkyDeck’s Batch 19 Pad-13 Incubator Program; met with importers/exporters to refine and present AI-driven customs clearance solutions.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Pawty -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Pawty.ai — Data Science & Operations Strategy Intern</h3>
-        <p class="meta">Berkeley, CA • Sep 2024 – Dec 2024</p>
-        <ul>
-          <li>Conducted <strong>EDA</strong> with Python and SQL to uncover trends, optimize retention strategies, and boost user acquisition by <strong>10%</strong>.</li>
-          <li>Built and managed <strong>Tableau dashboards</strong>, integrating SQL queries to deliver actionable insights for decision-making.</li>
-          <li>Developed an AI platform leveraging the <strong>Instagram API</strong> and diffusion models to analyze dog–parent dynamics, increasing engagement by <strong>15%</strong>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Glamox Lighting -->
-<div class="timeline-item">
-  <div class="timeline-dot"></div>
-  <div class="timeline-content">
-    <h3>Glamox Lighting Industry — Data Analytics Intern</h3>
-    <p class="meta">Jakarta, Indonesia • May 2023 – Aug 2023</p>
-    <ul>
-      <li>Analyzed <strong>800+ transactions</strong> using <strong>SQL</strong> and <strong>Excel</strong> to validate data accuracy, identify duplicate entries, and streamline invoice processing.</li>
-      <li>Developed dynamic <strong>Excel models</strong> and <strong>SQL queries</strong> to support validation processes, ensuring database reliability.</li>
-      <li>Researched market trends and the competitive landscape with the business development team, contributing to a strategy that drove a <strong>15% sales increase</strong>.</li>
-    </ul>
-  </div>
-</div>
-
-  </div>
-</section>
-
-
-
-<!-- PORTFOLIO / PROJECTS -->
-<section class="section container" id="portfolio">
-  <h2>Portfolio</h2>
-  <p class="lead">A selection of industry, analytics, and research projects.</p>
-
-  <div id="portfolio-sections"></div>
-</section>
-
-
- 
-  <script>
-  const PROJECT_SECTIONS = [
-    {
-      title: "Featured Experience",
-      subtitle: "Production-facing work, internships, startups, and applied AI projects.",
-      projects: [
-        {
-          title: "TikTok Storage Observability",
-          stack: "Spark • SQL • ETL • Dashboards",
-          image: "assets/tiktoklogo.jpg",
-          imageAlt: "TikTok logo",
-          description: `Built an <strong>end-to-end ETL pipeline</strong> using <strong>Spark</strong> and <strong>SQL</strong> to integrate API data into dashboards for TikTok storage observability. 
-          The system gave SREs real-time visibility into infrastructure health and reduced investigation time from over an hour to <strong>2 minutes</strong> — a <strong>96%</strong> improvement. 
-          I also automated compliance workflows, saving <strong>40–100 manual hours</strong> per request.`,
-          link: ""
-        },
-        {
-          title: "Speech Quality & Fraud Signals",
-          stack: "FastAPI • PostgreSQL • NLP • ML",
-          image: "assets/kmeans.png",
-          imageAlt: "Speech clustering screenshot",
-          description: `Built backend APIs with <strong>FastAPI</strong> and <strong>PostgreSQL</strong> to support multimodal speech and behavioral analysis. 
-          Developed analytics pipelines using <strong>NLP</strong> and <strong>ML</strong> to process speech and gaze data for anomaly and fraud detection. 
-          The system improved evaluation consistency and made interview analysis more scalable.`,
-          buttonText: "View Project",
-          link: "assets/CDSS_Symposium_Project.pdf",
-          linkType: "pdf"
-        },
-          {
-          title: "AI Customs HS-Code Assistant",
-          stack: "Python • ML • Weaviate • RAG",
-          image: "assets/excidiabanner.jpeg",
-          imageAlt: "Excidia banner",
-        
-          description: `Built <strong>ETL pipelines</strong> to transform raw customs data into a validated, deduplicated dataset of <strong>5,000+ HS codes</strong>.
-        
-          Developed an <strong>RAG-based chatbot</strong> with <strong>Weaviate vector search</strong> to automate HS-code classification and customs guidance.
-        
-          Selected as one of <strong>50 startups</strong> in Berkeley SkyDeck’s Batch 19 Pad-13 Incubator.`,
-        
-          buttonText: "View Project",
-          link: "https://github.com/kaitlynhuang26/customs_classifier"
-        },
-
-        {
-          title: "Pawty AI",
-          stack: "Computer Vision • Stable Diffusion • Product Analytics",
-          image: "assets/pawtyimage.jpg",
-          imageAlt: "Pawty AI output",
-          description: "Collaborated on a computer vision feature that transformed dog images into animated outputs, increasing user engagement by 15% and user acquisition by 10%.",
-          buttonText: "Visit Website",
-          link: "https://pawty.ai/",
-          linkType: "live"
-        },
-        {
-        title: "Rental AI Assistant",
-        stack: "React • FastAPI • Groq • Excel • Pandas",
-        image: "assets/gif-rental-ai.gif",
-        imageAlt: "Rental AI Assistant dashboard",
-        description: `Built an <strong>AI-powered rental housing management system</strong> to digitize a manual monthly rental workflow previously tracked in a physical book and Excel. 
-        The app uses a <strong>React dashboard</strong> and <strong>FastAPI backend</strong> to track room availability, tenants, payment status, late rent, cash/transfer payments, and monthly rental periods. 
-        I integrated a <strong>Groq-powered AI chatbot</strong> that lets users ask natural-language questions like “Which rooms are empty?” or “Who paid late?” and safely preview updates before writing to Excel with <strong>backup and audit logs</strong>.`,
-        link: "https://github.com/kaitlynhuang26/rental-housing-system"
-        },
-        
-        {
-          title: "Postura – AI Posture Necklace",
-          stack: "FastAPI • BLE • WebSocket • React • Product Strategy • Market Validation",
-          image: "assets/aligne_pic.jpeg",
-          imageAlt: "Postura screenshot",
-          description: "Built a FastAPI backend with BLE and WebSocket pipelines to process 5,000+ high-frequency sensor readings per minute, powering real-time AI posture feedback and a React analytics dashboard. Also contributed to the product pitch, market positioning, and investor story for Aligné, connecting the technical prototype to a clear business vision.",
-          buttonText: "View Project",
-          link: "https://github.com/kaitlynhuang26/cal_hacks",
-          secondButtonText: "View Pitch Deck",
-          secondLink: "assets/Aligne_Pitch_Deck.pdf"
-        }
-      ]
-    },
-    {
-      title: "Data Science & Analytics Projects",
-      subtitle: "Dashboards, modeling, EDA, SQL analysis, and business insights.",
-      projects: [
-
-        {
-          title: "Customer Segmentation & Sales Prediction",
-          stack: "K-means • Python • ML • Forecasting",
-          image: "",
-          imageAlt: "Customer segmentation visualization",
-          description: "Built a cluster-then-predict framework using customer segmentation and segment-specific models to forecast purchase behavior and improve targeting decisions.",
-          buttonText: "View Project",
-          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/customer_segmentation.ipynb",
-          secondButtonText: "View Presentation",
-          secondLink: "assets/customer_segmentation_slides.pdf"
-        },
-
-      {
-          title: "Yelp Restaurant Ratings Analysis",
-          stack: "Python • Logistic Regression • Decision Tree • Predictive Modeling",
-          image: "",
-          imageAlt: "Yelp restaurant ratings analysis project",
-          description: "Built a machine learning workflow to predict high-rated restaurants using Yelp business data, applying feature engineering, logistic regression, and decision tree models to identify the strongest drivers of 4+ star ratings. Analyzed model performance and turned the results into business recommendations around customer experience, review growth, and profile completeness.",
-          buttonText: "View Notebook",
-          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Yelp_business_recomendation.ipynb"
-        },
-
-        {
-          title: "E-Commerce Customer Churn Prediction",
-          stack: "Python • Scikit-learn • Classification • Model Comparison",
-          image: "",
-          imageAlt: "Customer churn prediction project",
-          description: `Analyzed e-commerce customer records to identify churn drivers and predict at-risk users. Built and compared <strong> Logistic Regression, LDA, Decision Tree, and Random Forest models </strong>, then used cross-validation and bootstrapping to evaluate stability. The final Random Forest model delivered 98.2% accuracy with strong precision, helping translate churn signals into targeted retention actions.`,
-          buttonText: "View Project",
-          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/E-commerce_Customer_Churn_Analysis.ipynb?short_path=66be82d",
-          secondButtonText: "View Report",
-          secondLink: "assets/E-commerce_churn_analysis_report.pdf"
-        },
-
-      {
-        title: "Honda Car Sales Prediction",
-        stack: "Python • Regression • Feature Engineering • Model Evaluation",
-        image: "",
-        imageAlt: "Car sales prediction project",
-        description: "Built a predictive modeling workflow to analyze car sales patterns and estimate sales performance from structured business data. Cleaned and transformed features, tested regression-based approaches, and evaluated model performance to identify the variables most strongly linked to sales outcomes. The project translated raw sales data into forecasting insights that could support pricing, inventory, and planning decisions.",
-        buttonText: "View Notebook",
-        link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Prediction_car_sales.ipynb",
-        linkType: "notebook"
-        },
-
-
-        {
-          title: "Road Safety Improvement",
-          stack: "Pandas • NumPy • Matplotlib • EDA",
-          image: "assets/road_safety_image.jpeg",
-          imageAlt: "Road safety improvement image",
-          description: "Earned 2nd place at a datathon by analyzing crash data and identifying key factors like lane count, location, and driver behavior, leading to 10+ actionable safety recommendations.",
-          buttonText: "View PDF",
-          link: "assets/ShowcaseBeamTeam.pdf",
-          linkType: "pdf"
-        },
-        {
-          title: "Dog Boarding Dashboard",
-          stack: "Tableau • SQL • KPI Analytics",
-          image: "assets/pawty_dashboard_pic.jpeg",
-          imageAlt: "Pawty AI dashboard",
-          description: "Built an interactive dashboard to track customer behavior and KPIs, helping inform marketing and resource planning decisions that increased subscribers by 10%.",
-          buttonText: "View Dashboard",
-          link: "assets/pawty_example_dashboard.pdf",
-          linkType: "pdf"
-        },
-        {
-          title: "Bike Sharing Demand",
-          stack: "Pandas • EDA • Forecasting Insights",
-          image: "",
-          imageAlt: "",
-          description: "Explored bike-sharing usage patterns and analyzed the effects of weather and seasonality to support smarter resource allocation and service planning.",
-          buttonText: "View Notebook",
-          link: "",
-          linkType: "notebook"
-        },
-        {
-          title: "Chicago Crime Analysis",
-          stack: "SQL • Data Analysis • Public Data",
-          image: "",
-          imageAlt: "",
-          description: "Queried Chicago crime datasets to analyze crime trends across type, location, and seasonality, producing insights for targeted safety and resource planning.",
-          buttonText: "View Notebook",
-          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/crime_chicago_sql.ipynb",
-          linkType: "notebook"
-        },
-        {
-          title: "Regression Analysis",
-          stack: "StatsModels • Pandas • NumPy",
-          image: "",
-          imageAlt: "",
-          description: "Built linear and multiple regression models, interpreted coefficients and outputs, and applied the framework to study minimum wage and employment effects.",
-          buttonText: "View Notebook",
-          link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Regression%20analysis.ipynb",
-          linkType: "notebook"
-        }
-      ]
-    },
-    {
-      title: "Research & Academic Foundations",
-      subtitle: "Research, statistics, and foundational CS projects.",
-      projects: [
-        {
-          title: "Analyzing Family Incarceration",
-          stack: "SAS • Regression • Research",
-          image: "",
-          imageAlt: "",
-          description: "Used SAS to analyze the relationship between father imprisonment, parent–child closeness, and future incarceration risk using longitudinal survey data.",
-          buttonText: "View Research",
-          link: "assets/ResearchSASsoftware.pdf",
-          linkType: "pdf"
-        },
-        {
-          title: "Impact of Educational Games",
-          stack: "Research • Data Analysis • Education",
-          image: "assets/educational_games.jpg",
-          imageAlt: "Educational games project",
-          description: "Led an 11-member team analyzing how classroom games affected engagement and grades, contributing to a 40% increase in interaction and a 200% increase in A grades."
-        },
-        {
-          title: "Autocorrect Algorithm",
-          stack: "Python • Data Structures • Text Processing",
-          image: "assets/autocorrect.png",
-          imageAlt: "Autocorrect screenshot",
-          description: "Built an autocorrect system and real-time typing speed counter using Python and error-correction logic to improve fast interactive text input."
-        },
-        {
-          title: "Ants vs. Bees",
-          stack: "Python • OOP • Game Logic",
-          image: "assets/antsvsbees.gif",
-          imageAlt: "Ants vs Bees game",
-          description: "Designed a strategy game inspired by Plants vs. Zombies, implementing custom game logic, player actions, and object-oriented mechanics."
-        }
-      ]
-    }
-  ];
-
-  function renderPortfolio() {
-    const container = document.getElementById("portfolio-sections");
-
-    PROJECT_SECTIONS.forEach(section => {
-      const sectionEl = document.createElement("div");
-      sectionEl.style.marginBottom = "56px";
-
-      sectionEl.innerHTML = `
-        <div style="margin-bottom:20px;">
-          <h3 style="font-size:28px; margin:0 0 8px; color:#161827;">${section.title}</h3>
-          <p style="margin:0; color:#5a6175;">${section.subtitle}</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid container">
+        <div>
+          <div class="eyebrow"><span class="status-dot"></span> Data Engineer + Data Scientist</div>
+          <h1>Building data systems with <span class="gradient-text">clarity, color, and impact.</span></h1>
+          <p class="subtitle">
+            UC Berkeley Data Science student and data engineering intern experienced in Python, SQL, Spark, ETL pipelines, dashboards, and practical AI systems that help teams make faster decisions.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="assets/Kaitlyn_Widjaja_Resume.pdf" download>Download resume</a>
+            <a class="btn outline" href="#portfolio">View projects</a>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/kaitlynhuang26" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/kaitlynwidjaja" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:kaitlynwidjaja@berkeley.edu">Email</a>
+          </div>
         </div>
-        <div class="grid projects"></div>
-      `;
 
-      const grid = sectionEl.querySelector(".grid.projects");
-
-      section.projects.forEach(project => {
-        const hasImage = project.image && project.image.trim() !== "";
-
-        const thumbHTML = hasImage
-          ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" onclick="openModal(this.src)" style="width:100%;height:160px;object-fit:cover;border-radius:6px;">`
-          : `<span>${project.stack}</span>`;
-
-        const primaryButton =
-  project.link && project.link !== "PUT_LINK_HERE"
-    ? `<a href="${project.link}" class="button" target="_blank" rel="noopener noreferrer">${project.buttonText || "View Project"}</a>`
-    : "";
-
-const secondaryButton =
-  project.secondLink && project.secondLink !== "PUT_LINK_HERE"
-    ? `<a href="${project.secondLink}" class="button" target="_blank" rel="noopener noreferrer">${project.secondButtonText || "View More"}</a>`
-    : "";
-
-const buttonHTML = `
-  <div style="display:flex; gap:10px; flex-wrap:wrap; margin: 0 16px 16px;">
-    ${primaryButton}
-    ${secondaryButton}
-  </div>
-`;
-
-        const card = document.createElement("article");
-        card.className = "card";
-      card.innerHTML = `
-        <div class="thumb">${thumbHTML}</div>
-        <h3>${project.title}</h3>
-        <p style="margin:0 16px 8px; font-size:14px; color:#4f46e5; font-weight:600;">${project.stack}</p>
-        <p>${project.description}</p>
-        ${buttonHTML}
-      `;
-
-        grid.appendChild(card);
-      });
-
-      container.appendChild(sectionEl);
-    });
-  }
-
-  renderPortfolio();
-</script>
-
-
-<!-- SKILLS -->
-<section class="section container" id="skills">
-  <h2>Skillset</h2>
-  <div class="skills">
-    <div class="skill">
-      <h4>Data Engineering</h4>
-      <p>Batch/stream ETL, data modeling, validation, testing, and reliability.</p>
-    </div>
-    <div class="skill">
-      <h4>Analytics & Visualization</h4>
-      <p>Exploratory Data Analysis (EDA) to executive dashboards with storytelling & measurable KPIs.</p>
-    </div>
-    <div class="skill">
-      <h4>Machine Learning</h4>
-      <p>Classification, regression, feature engineering, model evaluation, and deployment.</p>
-    </div>
-    <div class="skill">
-      <h4>Product Thinking</h4>
-      <p>Requirement gathering, stakeholder collaboration, presentation skills, teamwork, time management, and multitasking.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- LEADERSHIP & COMMUNITY -->
-<section class="section container" id="leadership">
-  <h2>Leadership & Community Impact</h2>
-  <div class="leadership">
-    <!-- PTK -->
-    <article class="lead-card">
-      <img src="assets/scholarship.png" alt="Scholarship Workshop" />
-      <div class="body">
-        <h3>Co-President, Phi Theta Kappa Honor Society (2022–2023)</h3>
-        <p>
-          Led our chapter to rank top 41 out of 1,200+ worldwide! 🎉 Organized 12 campus events — from scholarship and college success workshops to fun socials and beach cleanups. It wasn’t just about honor; it was about heart, community, and lifting each other up.
-        </p>
-        <img class="subimg" src="assets/beach.jpeg" alt="Beach cleanup" />
+        <div class="hero-card" aria-label="Kaitlyn portrait and data pipeline visual">
+          <div class="portrait-frame">
+            <img src="assets/kait.jpg" alt="Kaitlyn Widjaja" />
+          </div>
+          <div class="pipeline" aria-hidden="true">
+            <div class="pipeline-step"><span class="step-icon"></span> Ingest raw data</div>
+            <div class="pipeline-step"><span class="step-icon"></span> Model + validate</div>
+            <div class="pipeline-step"><span class="step-icon"></span> Ship insights</div>
+          </div>
+          <div class="metric-panel">
+            <strong>96%</strong>
+            <span>reduction in SRE investigation time from production-facing dashboard and ETL work.</span>
+          </div>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <!-- Indonesian Student Association -->
-    <article class="lead-card">
-      <img src="assets/gamelan.jpg" alt="Indonesian culture performance" />
-      <div class="body">
-        <h3>Founder & President, Indonesian Student Association</h3>
-        <p>
-          I started the first Indonesian Student Association at Skyline to create a safe space for fellow Indonesians to connect and feel at home. We shared our rich culture with the campus through traditional games, music, and performances — from wayang to gamelan!
-        </p>
-        <img class="subimg" src="assets/indo.jpg" alt="Indonesian community gathering" />
+    <section class="section container" id="about">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>A builder who likes the messy middle of data.</h2>
+        </div>
+        <p class="lead">I enjoy turning raw, scattered information into reliable pipelines, useful dashboards, and simple analytics that help people act with confidence.</p>
       </div>
-    </article>
 
-    <!-- International Student Ambassador -->
-    <article class="lead-card">
-      <img src="assets/international.jpg" alt="International student event" />
-      <div class="body">
-        <h3>International Student Ambassador</h3>
-        <p>
-          Bridged communication between international students and the U.S. Department of State, while mentoring and supporting over 300 students. Hosted orientations, career workshops, and cultural events that brought our campus together and celebrated global diversity.
-        </p>
-        <img class="subimg" src="assets/usgov.png" alt="Department of State engagement" />
-      </div>
-    </article>
+      <div class="about-panel">
+        <article class="story-card">
+          <p>
+            <strong>Hi, I am Kaitlyn</strong>, a UC Berkeley Data Science student and recent Data Engineering intern at TikTok USDS. My work sits between engineering, analytics, machine learning, and product thinking.
+          </p>
+          <p>
+            I care about clear systems: data that is clean enough to trust, interfaces that are easy to scan, and insights that connect technical work to real decisions.
+          </p>
+          <div class="signal-grid">
+            <div class="signal"><strong>5,000+</strong><span>records structured for ML/RAG workflows</span></div>
+            <div class="signal"><strong>40-100</strong><span>manual hours saved per request</span></div>
+            <div class="signal"><strong>300+</strong><span>students supported through leadership</span></div>
+          </div>
+        </article>
 
-    <!-- Tech for Seniors -->
-    <article class="lead-card">
-      <img src="assets/ptkseniors.jpg" alt="Teaching seniors tech" />
-      <div class="body">
-        <h3>Volunteer Project Lead — Tech for Seniors</h3>
-        <p>
-          Led a volunteer project to teach 20+ senior citizens how to use tech — from sending texts to Zoom calls. Helped them stay connected with family, access services, and feel confident navigating daily life digitally. Offered the service in 9 different languages!
-        </p>
-        <img class="subimg" src="assets/seniors.jpeg" alt="Senior workshop" />
+        <aside class="toolbox-card" aria-label="Toolbox">
+          <div class="toolbox-group">
+            <h3>Engineering</h3>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Spark</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">Django</span>
+              <span class="chip">Docker</span>
+            </div>
+          </div>
+          <div class="toolbox-group">
+            <h3>Data Systems</h3>
+            <div class="chips">
+              <span class="chip green">ETL</span>
+              <span class="chip green">Data Modeling</span>
+              <span class="chip green">AWS</span>
+              <span class="chip green">Postgres</span>
+              <span class="chip green">Hive</span>
+              <span class="chip green">ClickHouse</span>
+            </div>
+          </div>
+          <div class="toolbox-group">
+            <h3>Analytics + ML</h3>
+            <div class="chips">
+              <span class="chip warm">Tableau</span>
+              <span class="chip warm">Grafana</span>
+              <span class="chip warm">Scikit-learn</span>
+              <span class="chip warm">PyTorch</span>
+              <span class="chip warm">Pandas</span>
+            </div>
+          </div>
+          <div class="toolbox-group">
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip violet">English</span>
+              <span class="chip violet">Indonesian</span>
+              <span class="chip violet">Chinese</span>
+            </div>
+          </div>
+        </aside>
       </div>
-    </article>
+    </section>
 
-    <!-- EYH Workshop -->
-    <article class="lead-card">
-      <img src="assets/stem.jpeg" alt="STEM workshop" />
-      <div class="body">
-        <h3>EYH Workshop Lead — Forensic Science in STEM</h3>
-        <p>
-          Designed and led a hands-on STEM workshop for 80+ middle school girls. We went from 6 to 32 students saying they wanted to pursue forensic science! 👩‍🔬 It was great inspiring the next generation of women in STEM.
-        </p>
+    <section class="section container" id="experience">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Experience</p>
+          <h2>Data engineering, analytics, and AI product work.</h2>
+        </div>
       </div>
-    </article>
-  </div>
-</section>
 
-  
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="container inner">
-      <div>
-        <h2 style="color:#fff;margin:0 0 8px">Let’s work together</h2>
-        <p style="margin:0;color:#c6cbea">Open to internships & full‑time opportunities.</p>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">Aug 2025 - Dec 2025</div>
+          <div class="timeline-content">
+            <h3>LG Nova - Data Engineer Intern</h3>
+            <p class="meta">Berkeley, CA</p>
+            <ul>
+              <li>Built automated ETL pipelines to ingest API data into PostgreSQL for dashboards and downstream analytics.</li>
+              <li>Tested an end-to-end RAG model using consolidated datasets to improve retrieval quality and response accuracy.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">May 2025 - Aug 2025</div>
+          <div class="timeline-content">
+            <h3>TikTok US Data Security - Data Engineer Intern</h3>
+            <p class="meta">San Jose, CA</p>
+            <ul>
+              <li>Designed dashboards and ETL pipelines using Spark and SQL for storage infrastructure observability.</li>
+              <li>Reduced SRE on-call resolution time by 96%, from 1 hour to 2 minutes.</li>
+              <li>Automated compliance workflows, saving 40-100 manual hours per request.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Feb 2025 - May 2025</div>
+          <div class="timeline-content">
+            <h3>Qlay Technologies - Software Development Intern</h3>
+            <p class="meta">Berkeley, CA</p>
+            <ul>
+              <li>Engineered an AI-powered speech analysis system using NLP and ML to evaluate pronunciation, fluency, and behavioral signals.</li>
+              <li>Developed FastAPI and PostgreSQL backend services for model integration and analysis workflows.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-date">Nov 2024 - May 2025</div>
+          <div class="timeline-content">
+            <h3>Excidia - Data Scientist</h3>
+            <p class="meta">Berkeley, CA</p>
+            <ul>
+              <li>Built Python scripts to scrape, validate, and structure 5,000+ HS code records.</li>
+              <li>Evaluated ML model performance and collaborated on an automated HS code classification chatbot.</li>
+            </ul>
+          </div>
+        </article>
       </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn outline" href="mailto:kaitlynwidjaja@berkeley.edu">kaitlynwidjaja@berkeley.edu</a>
-        <a class="btn outline" href="tel:+16505018006">(650) 501‑8006</a>
-        <a class="btn" href="https://www.linkedin.com/in/kaitlynwidjaja">LinkedIn</a>
+    </section>
+
+    <section class="section container" id="portfolio">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Portfolio</p>
+          <h2>Selected projects with business and technical context.</h2>
+        </div>
+        <p class="lead">A more visual project gallery with real screenshots where available and generated data visuals where a project did not have a thumbnail yet.</p>
       </div>
-    </div>
-  </section>
+      <div id="portfolio-sections"></div>
+    </section>
+
+    <section class="section container" id="skills">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Skillset</p>
+          <h2>What I bring to technical teams.</h2>
+        </div>
+      </div>
+
+      <div class="skills">
+        <article class="skill">
+          <div class="skill-icon">DE</div>
+          <h3>Data Engineering</h3>
+          <p>Batch ETL, API ingestion, data modeling, validation, warehousing, and reliability-focused pipelines.</p>
+        </article>
+        <article class="skill">
+          <div class="skill-icon">BI</div>
+          <h3>Analytics & Visualization</h3>
+          <p>EDA, KPI design, executive dashboards, SQL analysis, Tableau, Grafana, and insight storytelling.</p>
+        </article>
+        <article class="skill">
+          <div class="skill-icon">ML</div>
+          <h3>Machine Learning</h3>
+          <p>Classification, regression, clustering, feature engineering, model evaluation, and practical deployment.</p>
+        </article>
+        <article class="skill">
+          <div class="skill-icon">PT</div>
+          <h3>Product Thinking</h3>
+          <p>Requirements, stakeholder communication, presentation, teamwork, prioritization, and user-centered tradeoffs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="leadership">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Leadership</p>
+          <h2>Community work with a human center.</h2>
+        </div>
+      </div>
+
+      <div class="leadership">
+        <article class="lead-card feature">
+          <img src="assets/scholarship.png" alt="Scholarship Workshop" />
+          <div class="lead-body">
+            <span class="tag">Community</span>
+            <h3>Co-President, Phi Theta Kappa Honor Society</h3>
+            <p>Led a chapter ranked top 41 out of 1,200+ worldwide and organized 12 campus events across scholarships, college success, socials, and service.</p>
+          </div>
+        </article>
+        <article class="lead-card feature">
+          <img src="assets/gamelan.jpg" alt="Indonesian culture performance" />
+          <div class="lead-body">
+            <span class="tag">Culture</span>
+            <h3>Founder & President, Indonesian Student Association</h3>
+            <p>Created a welcoming space for Indonesian students and shared traditional games, music, and performances with the broader campus.</p>
+          </div>
+        </article>
+        <article class="lead-card">
+          <img src="assets/international.jpg" alt="International student event" />
+          <div class="lead-body">
+            <span class="tag">Mentorship</span>
+            <h3>International Student Ambassador</h3>
+            <p>Supported 300+ students through orientations, cultural programs, and communication with the U.S. Department of State.</p>
+          </div>
+        </article>
+        <article class="lead-card">
+          <img src="assets/ptkseniors.jpg" alt="Teaching seniors tech" />
+          <div class="lead-body">
+            <span class="tag">Access</span>
+            <h3>Volunteer Project Lead - Tech for Seniors</h3>
+            <p>Led multilingual workshops helping 20+ senior citizens build confidence with everyday technology.</p>
+          </div>
+        </article>
+        <article class="lead-card">
+          <img src="assets/stem.jpeg" alt="STEM workshop" />
+          <div class="lead-body">
+            <span class="tag">STEM</span>
+            <h3>EYH Workshop Lead - Forensic Science in STEM</h3>
+            <p>Designed and led a hands-on STEM workshop for 80+ middle school students.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-inner container">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Let us build useful data products.</h2>
+          <p class="lead">Open to internships and full-time opportunities in data engineering, analytics engineering, data science, and AI product work.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn outline" href="mailto:kaitlynwidjaja@berkeley.edu">Email</a>
+          <a class="btn outline" href="tel:+16505018006">Call</a>
+          <a class="btn" href="https://www.linkedin.com/in/kaitlynwidjaja" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <div>© <span id="y"></span> Kaitlyn Widjaja — Built with HTML/CSS. Deployed on GitHub Pages.</div>
-    </div>
+    <div class="container">© <span id="y"></span> Kaitlyn Widjaja - Built with HTML/CSS. Preview only.</div>
   </footer>
 
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" onclick="closeModal()" aria-label="Close image">&times;</span>
+    <img class="modal-content" id="modalImage" alt="" />
+  </div>
+
   <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-  
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
+    const PROJECT_SECTIONS = [
+      {
+        title: "Featured Experience",
+        subtitle: "Production-facing work, internships, AI systems, and applied data products.",
+        projects: [
+          {
+            title: "TikTok Storage Observability",
+            stack: "Spark SQL - ETL - Dashboards - Infrastructure",
+            image: "assets/tiktoklogo.jpg",
+            visual: "violet",
+            description: "Built an end-to-end ETL pipeline using Spark and SQL to integrate API data into dashboards for storage observability, reducing investigation time from over an hour to 2 minutes.",
+            buttonText: "",
+            link: ""
+          },
+          {
+            title: "Speech Quality & Fraud Signals",
+            stack: "FastAPI - PostgreSQL - NLP - ML",
+            image: "assets/kmeans.png",
+            visual: "green",
+            description: "Built backend APIs and analytics pipelines to process speech and gaze data for anomaly detection, improving evaluation consistency and scalability.",
+            buttonText: "View Project",
+            link: "assets/CDSS_Symposium_Project.pdf"
+          },
+          {
+            title: "AI Customs HS-Code Assistant",
+            stack: "Python - ML - Weaviate - RAG",
+            image: "assets/excidiabanner.jpeg",
+            visual: "warm",
+            description: "Structured 5,000+ customs records and developed a RAG-based chatbot with vector search to automate HS-code classification and customs guidance.",
+            buttonText: "View Project",
+            link: "https://github.com/kaitlynhuang26/customs_classifier"
+          },
+          {
+            title: "Pawty AI",
+            stack: "Computer Vision - Diffusion Models - Product Analytics",
+            image: "assets/pawtyimage.jpg",
+            visual: "violet",
+            description: "Collaborated on a computer vision feature that transformed dog images into animated outputs, increasing user engagement by 15% and user acquisition by 10%.",
+            buttonText: "Visit Website",
+            link: "https://pawty.ai/"
+          },
+          {
+            title: "Rental AI Assistant",
+            stack: "React - FastAPI - Groq - Excel - Pandas",
+            image: "assets/gif-rental-ai.gif",
+            visual: "green",
+            description: "Built an AI-powered rental housing dashboard with natural-language querying, payment tracking, safe update previews, backups, and audit logs.",
+            buttonText: "View Project",
+            link: "https://github.com/kaitlynhuang26/rental-housing-system"
+          },
+          {
+            title: "Postura - AI Posture Necklace",
+            stack: "FastAPI - BLE - WebSocket - React",
+            image: "assets/aligne_pic.jpeg",
+            visual: "warm",
+            description: "Built a backend pipeline for high-frequency sensor readings, powering real-time posture feedback and a React analytics dashboard.",
+            buttonText: "View Project",
+            link: "https://github.com/kaitlynhuang26/cal_hacks",
+            secondButtonText: "View Pitch Deck",
+            secondLink: "assets/Aligne_Pitch_Deck.pdf"
+          }
+        ]
+      },
+      {
+        title: "Data Science & Analytics",
+        subtitle: "Dashboards, modeling, EDA, SQL analysis, and business insights.",
+        projects: [
+          {
+            title: "Customer Segmentation & Sales Prediction",
+            stack: "K-means - Python - ML - Forecasting",
+            visual: "violet",
+            description: "Built a cluster-then-predict workflow to forecast purchase behavior and support customer targeting decisions.",
+            buttonText: "View Notebook",
+            link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/customer_segmentation.ipynb",
+            secondButtonText: "View Presentation",
+            secondLink: "assets/customer_segmentation_slides.pdf"
+          },
+          {
+            title: "Yelp Restaurant Ratings Analysis",
+            stack: "Python - Logistic Regression - Decision Tree",
+            visual: "warm",
+            description: "Predicted high-rated restaurants using Yelp data, feature engineering, and model comparison to identify drivers of 4+ star ratings.",
+            buttonText: "View Notebook",
+            link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Yelp_business_recomendation.ipynb"
+          },
+          {
+            title: "E-Commerce Churn Prediction",
+            stack: "Python - Scikit-learn - Classification",
+            visual: "green",
+            description: "Compared classification models and used cross-validation to identify churn drivers, with a final Random Forest reaching 98.2% accuracy.",
+            buttonText: "View Project",
+            link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/E-commerce_Customer_Churn_Analysis.ipynb?short_path=66be82d",
+            secondButtonText: "View Report",
+            secondLink: "assets/E-commerce_churn_analysis_report.pdf"
+          },
+          {
+            title: "Honda Car Sales Prediction",
+            stack: "Python - Regression - Feature Engineering",
+            visual: "violet",
+            description: "Built a regression workflow to estimate sales performance and identify variables linked to pricing, inventory, and planning decisions.",
+            buttonText: "View Notebook",
+            link: "https://github.com/kaitlynhuang26/Portfolio/blob/main/assets/Prediction_car_sales.ipynb"
+          },
+          {
+            title: "Road Safety Improvement",
+            stack: "Pandas - NumPy - Matplotlib - EDA",
+            image: "assets/road_safety_image.jpeg",
+            visual: "warm",
+            description: "Earned 2nd place at a datathon by analyzing crash data and developing 10+ safety recommendations.",
+            buttonText: "View PDF",
+            link: "assets/ShowcaseBeamTeam.pdf"
+          },
+          {
+            title: "Dog Boarding Dashboard",
+            stack: "Tableau - SQL - KPI Analytics",
+            image: "assets/pawty_dashboard_pic.jpeg",
+            visual: "green",
+            description: "Built an interactive dashboard to track customer behavior and KPIs, supporting marketing and resource planning decisions.",
+            buttonText: "View Dashboard",
+            link: "assets/pawty_example_dashboard.pdf"
+          }
+        ]
+      },
+      {
+        title: "Research & Academic Foundations",
+        subtitle: "Research, statistics, and foundational computer science projects.",
+        projects: [
+          {
+            title: "Analyzing Family Incarceration",
+            stack: "SAS - Regression - Research",
+            visual: "green",
+            description: "Used SAS to study the relationship between father imprisonment, parent-child closeness, and future incarceration risk.",
+            buttonText: "View Research",
+            link: "assets/ResearchSASsoftware.pdf"
+          },
+          {
+            title: "Impact of Educational Games",
+            stack: "Research - Data Analysis - Education",
+            image: "assets/educational_games.jpg",
+            visual: "warm",
+            description: "Led an 11-member research team analyzing how classroom games affected engagement and grades.",
+            buttonText: "",
+            link: ""
+          },
+          {
+            title: "Autocorrect Algorithm",
+            stack: "Python - Data Structures - Text Processing",
+            image: "assets/autocorrect.png",
+            visual: "violet",
+            description: "Built an autocorrect system and real-time typing speed counter using Python and error-correction logic.",
+            buttonText: "",
+            link: ""
+          },
+          {
+            title: "Ants vs. Bees",
+            stack: "Python - OOP - Game Logic",
+            image: "assets/antsvsbees.gif",
+            visual: "warm",
+            description: "Implemented custom game logic, player actions, and object-oriented mechanics in a strategy game project.",
+            buttonText: "",
+            link: ""
+          }
+        ]
+      }
+    ];
 
-<script>
-  // function showSection(sectionId) {
-  //   document.querySelectorAll('.section').forEach(section => {
-  //     section.style.display = 'none';
-  //   });
-  //   document.getElementById(sectionId).style.display = 'block';
-  // }
+    function makeVisual(project, index) {
+      const variant = project.visual || ["violet", "warm", "green"][index % 3];
+      return `
+        <div class="data-visual ${variant}">
+          <div class="visual-grid"></div>
+          <div class="visual-label">${project.stack}</div>
+          <div class="visual-bars" aria-hidden="true">
+            <span style="height:38px"></span>
+            <span style="height:68px"></span>
+            <span style="height:52px"></span>
+            <span style="height:88px"></span>
+            <span style="height:60px"></span>
+          </div>
+        </div>
+      `;
+    }
 
-  function openModal(src) {
-    document.getElementById('imageModal').style.display = 'block';
-    document.getElementById('modalImage').src = src;
-  }
+    function renderPortfolio() {
+      const container = document.getElementById("portfolio-sections");
 
-  function closeModal() {
-    document.getElementById('imageModal').style.display = 'none';
-  }
-</script>
+      PROJECT_SECTIONS.forEach((section) => {
+        const sectionEl = document.createElement("section");
+        sectionEl.className = "project-section";
+        sectionEl.innerHTML = `
+          <div class="project-section-title">
+            <h3>${section.title}</h3>
+            <p>${section.subtitle}</p>
+          </div>
+          <div class="projects-grid"></div>
+        `;
 
+        const grid = sectionEl.querySelector(".projects-grid");
 
+        section.projects.forEach((project, index) => {
+          const thumbHTML = project.image
+            ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" onclick="openModal(this.src)" loading="lazy" />`
+            : makeVisual(project, index);
+
+          const primaryButton = project.link
+            ? `<a href="${project.link}" class="button" target="_blank" rel="noopener noreferrer">${project.buttonText || "View Project"}</a>`
+            : "";
+
+          const secondaryButton = project.secondLink
+            ? `<a href="${project.secondLink}" class="button secondary" target="_blank" rel="noopener noreferrer">${project.secondButtonText || "View More"}</a>`
+            : "";
+
+          const card = document.createElement("article");
+          card.className = "project-card";
+          card.innerHTML = `
+            <div class="thumb">${thumbHTML}</div>
+            <div class="project-body">
+              <h3>${project.title}</h3>
+              <p class="stack">${project.stack}</p>
+              <p>${project.description}</p>
+              <div class="project-actions">${primaryButton}${secondaryButton}</div>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+
+        container.appendChild(sectionEl);
+      });
+    }
+
+    function openModal(src) {
+      const modal = document.getElementById("imageModal");
+      const image = document.getElementById("modalImage");
+      modal.style.display = "grid";
+      modal.setAttribute("aria-hidden", "false");
+      image.src = src;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    document.getElementById("y").textContent = new Date().getFullYear();
+    renderPortfolio();
+  </script>
 </body>
 </html>
